@@ -20,7 +20,7 @@ namespace VELDsAlterraWeaponry
 
         public override string AssetsFolder => Path.Combine(Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location), "assets");
 
-        public PrawnSelfDefenseModule() : base("PrawnSelfDefenseModule", "P.R.A.W.N. Self-Defense module", "Since Alterra© has allowed weapons for expeditions on 4546B, the self-defense module of the Seatruck does, this self-defense especially built for the P.R.A.W.N. allows you to fight off every menaces and then escape more easily.")
+        public PrawnSelfDefenseModule() : base("PrawnSelfDefenseModule", "P.R.A.W.N. Self-Defense module", "Since Alterra® has allowed weapons for expeditions on 4546B, the self-defense module of the Seatruck does, this self-defense especially built for the P.R.A.W.N. allows you to fight off every menaces and then escape more easily.")
         {
             OnFinishedPatching += () =>
             {

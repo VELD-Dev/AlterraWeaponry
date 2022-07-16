@@ -9,7 +9,7 @@ using UnityEngine;
 
 namespace VELDsAlterraWeaponry
 {
-    [Menu("Alterra© Weaponry™")]
+    [Menu("Alterra® Weaponry™")]
     public class ModConfigs : ConfigFile
     {
         [Toggle(/*LabelLanguageId = "Options.DialogsBool",*/ Label = "Allow Dialogs", Tooltip = "Whether or not dialog boxes about the lore of the Alterra Weaponry will appear at the first lethal weapon have been build.")]
