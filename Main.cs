@@ -31,6 +31,9 @@ namespace VELDsAlterraWeaponry
             Config = OptionsPanelHandler.Main.RegisterModOptions<ModConfigs>();
 
             new ExplosiveTorpedoItem().Patch();
+            new CoalItem().Patch();
+            new GunpowderItem().Patch();
+            new PrawnSelfDefenseModule().Patch();
 
             Logger.Log(Logger.Level.Info, "Patched successfully.");
         }

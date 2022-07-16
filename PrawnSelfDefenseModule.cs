@@ -37,10 +37,10 @@ namespace VELDsAlterraWeaponry
         public override CraftTree.Type FabricatorType => CraftTree.Type.SeamothUpgrades;
         public override string[] StepsToFabricatorTab => new string[] { "ExosuitUpgrade" };
         public override float CraftingTime => 3f;
-        public override QuickSlotType QuickSlotType => QuickSlotType.Passive;
+        public override QuickSlotType QuickSlotType => QuickSlotType.Selectable;
         protected override Sprite GetItemSprite()
         {
-            return ImageUtils.LoadSpriteFromFile(Path.Combine(AssetsFolder, "PrawnSelfDefModule.png"));
+            return ImageUtils.LoadSpriteFromFile(Path.Combine(AssetsFolder, "PrawnPerimeterDefense.png"));
         }
         protected override RecipeData GetBlueprintRecipe()
         {
@@ -57,7 +57,7 @@ namespace VELDsAlterraWeaponry
             };
         }
 
-        public override IEnumerator getGameObjectAsync(IOut<GameObject> gameObject)
+        public override IEnumerator GetGameObjectAsync(IOut<GameObject> gameObject)
         {
             if(prefab == null)
             {
