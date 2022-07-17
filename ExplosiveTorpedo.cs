@@ -30,8 +30,8 @@ namespace VELDsAlterraWeaponry
 
         protected static GameObject prefab;
 
-        public override CraftTree.Type FabricatorType => CraftTree.Type.SeamothUpgrades;
-        public override string[] StepsToFabricatorTab => new string[] { "SeaTruckUpgrade" };
+        public override CraftTree.Type FabricatorType => CraftTree.Type.Fabricator;
+        public override string[] StepsToFabricatorTab => new string[] { "Upgrades", "ExosuitUpgrades" };
         public override TechGroup GroupForPDA => TechGroup.VehicleUpgrades;
         public override TechCategory CategoryForPDA => TechCategory.VehicleUpgrades;
         public override string DiscoverMessage => "Alterra® has made an exception for the expeditions on planet 4546B, and has allowed some lethal weapons. Be extremely careful, these are dangerous.";

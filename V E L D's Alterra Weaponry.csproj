@@ -96,6 +96,7 @@
   <PropertyGroup>
     <PostBuildEvent>mkdir "I:\SteamLibrary\steamapps\common\SubnauticaZero\QMods\$(TargetName)"
 copy /Y "$(TargetPath)" "I:\SteamLibrary\steamapps\common\SubnauticaZero\QMods\$(TargetName)"
-copy /Y "$(ProjectDir)\mod.json" "I:\SteamLibrary\steamapps\common\SubnauticaZero\QMods\$(TargetName)\mod.json"</PostBuildEvent>
+copy /Y "$(ProjectDir)\mod.json" "I:\SteamLibrary\steamapps\common\SubnauticaZero\QMods\$(TargetName)\mod.json"
+copy /Y "$(ProjectDir)\assets\" "I:\SteamLibrary\steamapps\common\SubnauticaZero\QMods\$(TargetName)\assets\"</PostBuildEvent>
   </PropertyGroup>
 </Project>

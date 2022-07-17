@@ -34,8 +34,8 @@ namespace VELDsAlterraWeaponry
         public override TechType RequiredForUnlock => TechType.SeaTruckUpgradePerimeterDefense;
         public override TechGroup GroupForPDA => TechGroup.VehicleUpgrades;
         public override TechCategory CategoryForPDA => TechCategory.VehicleUpgrades;
-        public override CraftTree.Type FabricatorType => CraftTree.Type.SeamothUpgrades;
-        public override string[] StepsToFabricatorTab => new string[] { "ExosuitUpgrade" };
+        public override CraftTree.Type FabricatorType => CraftTree.Type.Fabricator;
+        public override string[] StepsToFabricatorTab => new string[] { "Upgrades", "ExosuitUpgrades" };
         public override float CraftingTime => 3f;
         public override QuickSlotType QuickSlotType => QuickSlotType.Selectable;
         protected override Sprite GetItemSprite()

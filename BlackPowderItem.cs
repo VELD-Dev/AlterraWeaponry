@@ -34,7 +34,7 @@ namespace VELDsAlterraWeaponry
         public override TechGroup GroupForPDA => TechGroup.Resources;
         public override TechCategory CategoryForPDA => TechCategory.AdvancedMaterials;
         public override CraftTree.Type FabricatorType => CraftTree.Type.Fabricator;
-        public override string[] StepsToFabricatorTab => new string[] { "Resources" };
+        public override string[] StepsToFabricatorTab => new string[] { "Resources", "AdvancedMaterials" };
         public override float CraftingTime => 3f;
         protected override UnityEngine.Sprite GetItemSprite()
         {

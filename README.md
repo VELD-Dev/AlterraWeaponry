@@ -82,7 +82,8 @@ First ! Everywhere I put "®", "™" and other deposed symbols **DOES NOT MEAN**
 ### Credits
 I really thank **[Nagorrogan](https://github.com/Nagorogan "Nagorrogan's GitHub account")** for her precious help with the Subnautica programming.  
 > Todo:  
-> Understand code  
+> Understand code
+
 I also sincerely thank **Tom Stone** for the icons of the items, weapons and all these stuff in you PDA Inventory.  
 > Doable
 
