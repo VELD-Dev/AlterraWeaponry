@@ -14,7 +14,7 @@ using UnityEngine;
 
 namespace VELDsAlterraWeaponry
 {
-    internal class GunpowderItem : Craftable
+    internal class BlackPowderItem : Craftable
     {
         protected static GameObject prefab;
 
@@ -22,7 +22,7 @@ namespace VELDsAlterraWeaponry
 
         public override string AssetsFolder => Path.Combine(Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location), "assets");
 
-        public GunpowderItem() : base("GunpowderItem", "Gunpowder", "Since Alterra® has allowed weapons for expeditions on 4546B, gunpowder have been added to the PDA. What are you goind to do with that ??")
+        public BlackPowderItem() : base("BlackPowderItem", "Black powder", "Since Alterra® has allowed weapons for expeditions on 4546B, black powder have been added to the PDA. What are you goind to do with that ??")
         {
             OnFinishedPatching += () =>
             {

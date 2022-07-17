@@ -68,7 +68,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="CoalItem.cs" />
-    <Compile Include="GunpowderItem.cs" />
+    <Compile Include="BlackPowderItem.cs" />
     <Compile Include="ModConfigs.cs" />
     <Compile Include="ExplosiveTorpedo.cs" />
     <Compile Include="Main.cs" />

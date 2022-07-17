@@ -35,7 +35,7 @@ namespace VELDsAlterraWeaponry
         public override TechGroup GroupForPDA => TechGroup.VehicleUpgrades;
         public override TechCategory CategoryForPDA => TechCategory.VehicleUpgrades;
         public override string DiscoverMessage => "Alterra® has made an exception for the expeditions on planet 4546B, and has allowed some lethal weapons. Be extremely careful, these are dangerous.";
-        public override List<TechType> CompoundTechsForUnlock => new List<TechType> { TechType.Crash, TechType.Sulphur | GunpowderItem.thisTechType };
+        public override List<TechType> CompoundTechsForUnlock => new List<TechType> { TechType.Crash, TechType.Sulphur | BlackPowderItem.thisTechType };
         public override float CraftingTime => 5f;
         //public override PDAEncyclopedia.EntryData EncyclopediaEntryData => ;
         protected override Sprite GetItemSprite()
@@ -50,7 +50,7 @@ namespace VELDsAlterraWeaponry
                 Ingredients = new List<Ingredient>(new Ingredient[]
                 {
                     new Ingredient(TechType.Titanium, 1),
-                    new Ingredient(GunpowderItem.thisTechType, 2)
+                    new Ingredient(BlackPowderItem.thisTechType, 2)
                 })
             };
         }

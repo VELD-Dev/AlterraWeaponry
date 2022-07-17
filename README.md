@@ -2,7 +2,7 @@
 [![downloads](https://img.shields.io/github/downloads/VELD-Dev/AltarraWeaponry/total.svg?style=plastic)](https://github.com/VELD-Dev/AlterraWeaponry/downloads "Downloads count of the mod")
 [![issues](https://img.shields.io/github/issues/VELD-Dev/AlterraWeaponry?style=plastic)](https://github.com/VELD-Dev/AlterraWeaponry/issues "Issues of the mod")
 [![contributors](https://img.shields.io/github/contributors/VELD-Dev/AltarraWeaponry?style=plastic)](https://github.com/VELD-Dev/AlterraWeaponry/contributors "Contributors of the project")
-[![license](https://img.shields.io/badge/license-CC--BY--NC-green)](https://github.com/VELD-Dev/AlterraWeaponry/blob/master/LICENSE.txt "License of the mod")
+[![license](https://img.shields.io/badge/license-CC--BY--NC-green?style=plastic)](https://github.com/VELD-Dev/AlterraWeaponry/blob/master/LICENSE.txt "License of the mod")
 [![forks](https://img.shields.io/github/forks/VELD-Dev/AlterraWeaponry?style=plastic)](https://github.com/VELD-Dev/AlterraWeaponry/network/members "Forks on GitHub of the project")
 
 # V E L D's Alterra Weaponry
@@ -19,6 +19,10 @@ Here are few items added by the mod:
 		* Required researches for unlock:
 			* Crashfish scan
 			* Sulphur
+		* Craft data:
+			* Time: 5s
+			* Items: 1 Titanium, 2 Black Powder
+			* Gives: 2 Explosive Torpedoes
 	* Prawn Defense Perimeter Upgrade (10dmg / **NON-LETHAL**) - This upgrade allows to easily fight back hostile creatures.
 		* Required researches for unlock:
 			* Seatruck Defense Perimeter Upgrade
@@ -34,15 +38,15 @@ Here are few items added by the mod:
 			* Time: 7.5s
 			* Items: 1 Creepvine piece
 			* Gives: 4 Coal
-	* Gunpowder - Essential material for crafting of explosive gadgets and weapons. What are you going to do with ??
+	* Black Powder - Essential material for crafting of explosive gadgets and weapons. What are you going to do with ??
 		* Required researches for unlock:
 			* Sulphur
 			* Coal
 			* Coral Sample
 		* Craft data:
 			* Time: 3s
-			* Items: 1 Gunpowder, 1 Sulphur, 3 Coral Samples
-			* Gives: 1 Gunpowder
+			* Items: 1 Coal, 1 Sulphur, 3 Coral Samples
+			* Gives: 1 Black Powder
 The mod also add few subtitles & text boxes, databank entries and does few little improvements that you can disable in the mod options.
 
 # Install
