@@ -2,17 +2,17 @@
 [![downloads](https://img.shields.io/github/downloads/VELD-Dev/AltarraWeaponry/total.svg?style=plastic)](https://github.com/VELD-Dev/AlterraWeaponry/downloads "Downloads count of the mod")
 [![issues](https://img.shields.io/github/issues/VELD-Dev/AlterraWeaponry?style=plastic)](https://github.com/VELD-Dev/AlterraWeaponry/issues "Issues of the mod")
 [![contributors](https://img.shields.io/github/contributors/VELD-Dev/AltarraWeaponry?style=plastic)](https://github.com/VELD-Dev/AlterraWeaponry/contributors "Contributors of the project")
-[![license](https://img.shields.io/github/license/VELD-Dev/AlterraWeaponry?style=plastic)](https://github.com/VELD-Dev/AlterraWeaponry/blob/master/LICENSE.txt "License of the mod")
+[![license](https://img.shields.io/badge/license-CC--BY--NC-green)](https://github.com/VELD-Dev/AlterraWeaponry/blob/master/LICENSE.txt "License of the mod")
 [![forks](https://img.shields.io/github/forks/VELD-Dev/AlterraWeaponry?style=plastic)](https://github.com/VELD-Dev/AlterraWeaponry/network/members "Forks on GitHub of the project")
 
 # V E L D's Alterra Weaponry
 Alterra Weaponry is a mod for **Subnautica Below Zero** that add weapons, modules, upgrades, gadgets, resources and a lot of things without distorting the original game.
 
 ## Story (to make it canon with Obraxis Prime)
-Even if there was a carnage on Obraxis Prime, Alterra® and the Weapon Galactic Union has decided to allow some lethal weapons for researches and expedtions on 4546B to fight back the creatures on this planet (after the information gave by the survivor from the Aurora).  
+Even if there was a carnage on Obraxis Prime, AlterraÂ® and the Weapon Galactic Union has decided to allow some lethal weapons for researches and expedtions on 4546B to fight back the creatures on this planet (after the information gave by the survivor from the Aurora).  
 After this decision, research groups of the Arctic sector of 4546B received weapons blueprints. However, the **? Robotics** team was unable to use these weapons against Snow Worms, because of the resistance of their skin/shell.
 
-## Alterra® Weaponry™ improvements
+## AlterraÂ® Weaponryâ„¢ improvements
 Here are few items added by the mod:
 * Weapons & Upgrades
 	* Explosive Torpedoes (250dmg / **LETHAL**) - This torpedo make explosions in a short radius.
@@ -67,7 +67,7 @@ Enjoy your play with ported and brand new weapons & upgrades ! Do not be scared 
 
 # Disclaimer, credits & additional information
 ### Disclaimer
-First ! Everywhere I put "®", "™" and other deposed symbols **DOES NOT MEAN** that I possess these, it's **EXCLUSIVELY** for the style
+First ! Everywhere I put "Â®", "â„¢" and other deposed symbols **DOES NOT MEAN** that I possess these, it's **EXCLUSIVELY** for the style
 
 ### Credits
 I really thank **[Nagorrogan](https://github.com/Nagorogan "Nagorrogan's GitHub account")** for her precious help with the Subnautica programming.  
