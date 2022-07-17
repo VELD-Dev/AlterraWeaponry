@@ -1,7 +1,9 @@
-[![release](https://img.shields.io/github/release/VELD-Dev/AltarraWeaponry?style=plastic)](https://github.com/VELD-Dev/AlterraWeaponry/releases)
-[![license](https://img.shields.io/github/license/VELD-Dev/AlterraWeaponry?style=plastic)](https://github.com/VELD-Dev/AlterraWeaponry/blob/master/LICENSE.txt)
-[![issues](https://img.shields.io/github/issues/VELD-Dev/AlterraWeaponry?style=plastic)](https://github.com/VELD-Dev/AlterraWeaponry/issues)
-[![forks](https://img.shields.io/github/forks/VELD-Dev/AlterraWeaponry?style=plastic)](https://github.com/VELD-Dev/AlterraWeaponry/network/members)
+[![release](https://img.shields.io/github/release/VELD-Dev/AltarraWeaponry?style=plastic)](https://github.com/VELD-Dev/AlterraWeaponry/releases "Last version name of the mod")
+[![downloads](https://img.shields.io/github/downloads/VELD-Dev/AltarraWeaponry/total.svg?style=plastic)](https://github.com/VELD-Dev/AlterraWeaponry/downloads "Downloads count of the mod")
+[![issues](https://img.shields.io/github/issues/VELD-Dev/AlterraWeaponry?style=plastic)](https://github.com/VELD-Dev/AlterraWeaponry/issues "Issues of the mod")
+[![contributors](https://img.shields.io/github/contributors/VELD-Dev/AltarraWeaponry?style=plastic)](https://github.com/VELD-Dev/AlterraWeaponry/contributors "Contributors of the project")
+[![license](https://img.shields.io/github/license/VELD-Dev/AlterraWeaponry?style=plastic)](https://github.com/VELD-Dev/AlterraWeaponry/blob/master/LICENSE.txt "License of the mod")
+[![forks](https://img.shields.io/github/forks/VELD-Dev/AlterraWeaponry?style=plastic)](https://github.com/VELD-Dev/AlterraWeaponry/network/members "Forks on GitHub of the project")
 
 # V E L D's Alterra Weaponry
 Alterra Weaponry is a mod for **Subnautica Below Zero** that add weapons, modules, upgrades, gadgets, resources and a lot of things without distorting the original game.
