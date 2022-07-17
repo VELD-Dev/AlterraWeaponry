@@ -1,12 +1,13 @@
-[![release](https://img.shields.io/github/v/release/VELD-Dev/AlterraWeaponry?color=success&display_name=tag&logo=github&style=plastic)](https://github.com/VELD-Dev/AlterraWeaponry/releases "Last release of the mod")
-[![downloads release](https://img.shields.io/github/downloads/VELD-Dev/AlterraWeaponry/total?style=plastic)](https://github.com/VELD-Dev/AlterraWeaponry/downloads "Total downloads count of the mod")  
-[![latest](https://img.shields.io/github/v/tag/VELD-Dev/AlterraWeaponry?color=important&label=latest&logo=github&style=plastic)](https://github.com/VELD-Dev/AlterraWeaponry/tags "Last version, including pre-releases")
-[![downloads latest](https://img.shields.io/github/downloads-pre/VELD-Dev/AlterraWeaponry/latest/total?color=important&logo=github&style=plastic)](https://github.com/VELD-Dev/AlterraWeaponry/tags "Last version, including pre-release, downloads")  
-[![issues](https://img.shields.io/github/issues/VELD-Dev/AlterraWeaponry?style=plastic)](https://github.com/VELD-Dev/AlterraWeaponry/issues "Issues of the mod")
-[![contributors](https://img.shields.io/github/contributors/VELD-Dev/AltarraWeaponry?style=plastic)](https://github.com/VELD-Dev/AlterraWeaponry/contributors "Contributors of the project")
-[![license](https://img.shields.io/badge/license-CC--BY--NC-green?style=plastic)](https://github.com/VELD-Dev/AlterraWeaponry/blob/master/LICENSE.txt "License of the mod")
-[![forks](https://img.shields.io/github/forks/VELD-Dev/AlterraWeaponry?style=plastic)](https://github.com/VELD-Dev/AlterraWeaponry/network/members "Forks on GitHub of the project")  
-[![discord](https://img.shields.io/discord/324207629784186882?color=informational&label=subnautica%20modding&logo=discord&style=for-the-badge)](https://discord.gg/7M7cJWXMRe)
+Recommended version: 
+[![release](https://img.shields.io/github/v/release/VELD-Dev/AlterraWeaponry?color=success&display_name=tag&logo=github&style=flat)](https://github.com/VELD-Dev/AlterraWeaponry/releases "Last release of the mod")
+[![downloads release](https://img.shields.io/github/downloads/VELD-Dev/AlterraWeaponry/latest/total?color=success&logo=github)](https://github.com/VELD-Dev/AlterraWeaponry/downloads "Total downloads count of the mod")  
+Latest version (Non-recommended):
+[![latest](https://img.shields.io/github/v/tag/VELD-Dev/AlterraWeaponry?color=important&label=latest&logo=github&style=flat)](https://github.com/VELD-Dev/AlterraWeaponry/tags "Last version, including pre-releases")
+[![downloads latest](https://img.shields.io/github/downloads-pre/VELD-Dev/AlterraWeaponry/latest/total?color=important&logo=github&style=flat)](https://github.com/VELD-Dev/AlterraWeaponry/tags "Last version, including pre-release, downloads")  
+License:
+[![license](https://img.shields.io/badge/license-CC--BY--NC-green?style=flat)](https://github.com/VELD-Dev/AlterraWeaponry/blob/master/LICENSE.txt "License of the mod")  
+
+Subnautica Modding Discord: [![discord](https://img.shields.io/discord/324207629784186882?color=informational&label=subnautica%20modding&logo=discord&style=for-the-badge)](https://discord.gg/7M7cJWXMRe)
 
 # V E L D's Alterra Weaponry
 Alterra Weaponry is a mod for **Subnautica Below Zero** that add weapons, modules, upgrades, gadgets, resources and a lot of things without distorting the original game.
@@ -87,4 +88,12 @@ I also sincerely thank **Tom Stone** for the icons of the items, weapons and all
 If you notice any bug, do not forget to create an **[Issue report](https://github.com/VELD-Dev/AlterraWeaponry/issues "Issues")** on the GitHub page, it helps me a lot ! (but do not forget to check if this bug haven't already been reported, I hate duplicates)  
 I love *Markdown* files, they are so full of possibilities that's insane
   
-If you want to contact me, here's my Discord: `V E L D#6585` (my previous tag was #7070, I'm so sad to have lost it ;-;)  
+If you want to contact me, here's my Discord: `V E L D#6585` (my previous tag was #7070, I'm so sad to have lost it ;-;) 
+
+## General information
+
+[![issues](https://img.shields.io/github/issues/VELD-Dev/AlterraWeaponry?logo=github)](https://github.com/VELD-Dev/AlterraWeaponry/issues "Issues of the mod")
+[![contributors](https://img.shields.io/github/contributors/VELD-Dev/AltarraWeaponry?logo=github)](https://github.com/VELD-Dev/AlterraWeaponry/contributors "Contributors of the project")
+[![forks](https://img.shields.io/github/forks/VELD-Dev/AlterraWeaponry?logo=github)](https://github.com/VELD-Dev/AlterraWeaponry/network/members "Forks on GitHub of the project")
+[![stars](https://img.shields.io/github/stars/VELD-Dev/AlterraWeaponry?logo=github)](https://github.com/VELD-Dev/AlterraWeaponry/stargazers "Stars on GitHub of the project")
+[![watchers](https://img.shields.io/github/watchers/VELD-Dev/AlterraWeaponry?logo=github)](https://github.com/VELD-Dev/AlterraWeaponry/watchers "Watchers on Github of the project")
