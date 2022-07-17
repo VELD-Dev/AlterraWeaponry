@@ -5,7 +5,7 @@
 [![latest](https://img.shields.io/github/v/tag/VELD-Dev/AlterraWeaponry?color=important&label=latest&logo=github&style=flat)](https://github.com/VELD-Dev/AlterraWeaponry/tags "Last version, including pre-releases")
 [![downloads latest](https://img.shields.io/github/downloads-pre/VELD-Dev/AlterraWeaponry/latest/total?color=important&logo=github&style=flat)](https://github.com/VELD-Dev/AlterraWeaponry/tags "Last version, including pre-release, downloads")  
 Total downloads: [![total downloads](https://img.shields.io/github/downloads/VELD-Dev/AlterraWeaponry/total?color=success&logo=github)](https://github.com/VELD-Dev/AlterraWeaponry/downloads "Total downloads, including pre-releases, of the mod")  
-License: [![license](https://img.shields.io/badge/license-CC--BY--NC-green?style=flat)](https://github.com/VELD-Dev/AlterraWeaponry/blob/master/LICENSE.txt "License of the mod")  
+License: [![license](https://img.shields.io/badge/license-CC--BY--NC-green?style=flat&logo=creative-commons)](https://github.com/VELD-Dev/AlterraWeaponry/blob/master/LICENSE.txt "License of the mod")  
 
 Subnautica Modding Discord: [![discord](https://img.shields.io/discord/324207629784186882?color=informational&label=subnautica%20modding&logo=discord&style=for-the-badge)](https://discord.gg/7M7cJWXMRe)
 
@@ -61,11 +61,13 @@ Install process in few steps.
 * [SMLHelper Zero](https://www.nexusmods.com/subnauticabelowzero/mods/34 "NexusMods - SMLHelper Zero") **2.13.4 or higher** (See on the page how to install it)
 
 ### Step 1
-Download the mod in the [Files category on the NexusMods page](https://www.nexusmods.com/subnauticabelowzero/mods/286?tab=files "NexusMods - Alterra Weaponry > Files") - If there's none, just wait for a release (however, if you're a developer you can still build id yourself as a "latest version beta")  
-If, and only if, you do not trust **NexusMods**, download it from the [Releases page of the repo](https://github.com/VELD-Dev/AlterraWeaponry/releases "Releases"), you should find early and beta versions (I recommend taking releases instead of betas) but be careful, they might crash your game, maybe ?
+Download the mod in the [files category on the NexusMods page](https://www.nexusmods.com/subnauticabelowzero/mods/286?tab=files "NexusMods - Alterra Weaponry > Files") - If there's none, just wait for a release (however, if you're a developer you can still build it yourself as a "latest version beta")  
+If, and only if, you do not trust **NexusMods**, download it from the [releases page of the repo](https://github.com/VELD-Dev/AlterraWeaponry/releases "Releases"), you should find early and beta versions (I recommend taking releases instead of betas) but be careful, they might crash your game, maybe ?
 
 ### Step 2
-Once you have downloaded it, **uncompress** the `.zip` file (or **move** the uncompressed folder) into `SubnauticaZero > QMods >`, it should look like this : `SubnauticaZero > QMods > VELDsAlterraWeaponry > mod.json`
+Once you have downloaded it, **uncompress** the `.zip` file (or **move** the uncompressed folder) into  
+`SubnauticaZero > QMods >`, it should look like this :  
+`SubnauticaZero > QMods > VELDsAlterraWeaponry > mod.json`
 
 ### Step 3
 ?
