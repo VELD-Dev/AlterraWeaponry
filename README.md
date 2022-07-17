@@ -1,11 +1,12 @@
 Recommended version: 
 [![release](https://img.shields.io/github/v/release/VELD-Dev/AlterraWeaponry?color=success&display_name=tag&logo=github&style=flat)](https://github.com/VELD-Dev/AlterraWeaponry/releases "Last release of the mod")
-[![downloads release](https://img.shields.io/github/downloads/VELD-Dev/AlterraWeaponry/latest/total?color=success&logo=github)](https://github.com/VELD-Dev/AlterraWeaponry/downloads "Total downloads count of the mod")  
+[![downloads release](https://img.shields.io/github/downloads/VELD-Dev/AlterraWeaponry/latest/total?color=success&logo=github)](https://github.com/VELD-Dev/AlterraWeaponry/downloads "Last version downloads")  
 Latest version (Non-recommended):
 [![latest](https://img.shields.io/github/v/tag/VELD-Dev/AlterraWeaponry?color=important&label=latest&logo=github&style=flat)](https://github.com/VELD-Dev/AlterraWeaponry/tags "Last version, including pre-releases")
 [![downloads latest](https://img.shields.io/github/downloads-pre/VELD-Dev/AlterraWeaponry/latest/total?color=important&logo=github&style=flat)](https://github.com/VELD-Dev/AlterraWeaponry/tags "Last version, including pre-release, downloads")  
 License:
 [![license](https://img.shields.io/badge/license-CC--BY--NC-green?style=flat)](https://github.com/VELD-Dev/AlterraWeaponry/blob/master/LICENSE.txt "License of the mod")  
+Total downloads: [![total downloads](https://img.shields.io/github/downloads/VELD-Dev/AlterraWeaponry/total?color=success&logo=github)](https://github.com/VELD-Dev/AlterraWeaponry/downloads "Total downloads, including pre-releases, of the mod")  
 
 Subnautica Modding Discord: [![discord](https://img.shields.io/discord/324207629784186882?color=informational&label=subnautica%20modding&logo=discord&style=for-the-badge)](https://discord.gg/7M7cJWXMRe)
 
