@@ -37,7 +37,6 @@ namespace VELDsAlterraWeaponry
         public override string DiscoverMessage => "Alterra® has made an exception for the expeditions on planet 4546B, and has allowed some lethal weapons. Be extremely careful, these are dangerous.";
         public override List<TechType> CompoundTechsForUnlock => new List<TechType> { TechType.Crash, TechType.Sulphur | BlackPowderItem.thisTechType };
         public override float CraftingTime => 5f;
-        //public override PDAEncyclopedia.EntryData EncyclopediaEntryData => ;
         protected override Sprite GetItemSprite()
         {
             return ImageUtils.LoadSpriteFromFile(Path.Combine(AssetsFolder, "ExplosiveTorpedo.png"));

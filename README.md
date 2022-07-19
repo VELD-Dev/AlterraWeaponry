@@ -34,6 +34,17 @@ Here are few items added by the mod:
 			* Time: 3s
 			* Items: 4 Rubies, 2 Batteries, 1 Advanced Wiring Kit, 1 Seatruck Defense Perimeter Upgrade
 			* Gives: 1 Prawn Defense Perimeter Upgrade
+	* Prawn Laser Arm (1000dmg / **HIGHLY LETHAL**) - This is probably the most cheater weapon, but be careful with the energy of it
+		* Required researches for unlock:
+			* Prawn Grappling Arm module
+			* Prawn Drilling Arm module
+			* Prawn Torpedo Arm module
+			* Ion cube
+			* Ionic powercells
+		* Craft data:
+			* Time: 60s
+			* Items: 5 Ion Cubes, 4 Ionic Powercells, 1 Prawn Torpedo Arm, 5 Rubies, 5 Diamonds, 5 Magnetites, 5 Kyanites, 2 Plasteel Ingots, 4 Quartz, 4 Coppers, 2 Advanced Wiring Kit, 2 Microchip, 1 Advanced Refractor Lu86K
+			* Gives: 1 Prawn Laser Arm
 * Resources
 	* Coal - Essential material for advanced craftings. Can be used as energy source into Biomass generator
 		* Required researches for unlock:
@@ -51,14 +62,26 @@ Here are few items added by the mod:
 			* Time: 3s
 			* Items: 1 Coal, 1 Sulphur, 3 Coral Samples
 			* Gives: 1 Black Powder
+	* Advanced Refractor Lu86K - An advanced technology by XenoWorx, used in high precision or very powerful mining lasers. Can handle without problem over 86.000 Lumens of reflection load.
+		* Required researches for unlock:
+			* Silver
+			* Coal
+			* Microchip
+			* Reinforced glass
+			* Synthetic fibers
+			* Benzene
+		* Craft data:
+			* Time: 15s
+			* Items: 4 Silvers, 1 Coal, 4 Reinforced Glass, 1 Microchip, 2 Synthetic Fibers, 1 Benzene
+			* Gives: 1 Advanced Refractor Lu86K
 The mod also add few subtitles & text boxes, databank entries and does few little improvements that you can disable in the mod options.
 
 # Install
 Install process in few steps.
 
 ### Dependecies
-* [QModManager 4](https://www.nexusmods.com/subnauticabelowzero/mods/1 "NexusMods - QModManager 4") **4.4.3 or higher** (See on the page how to install it)
-* [SMLHelper Zero](https://www.nexusmods.com/subnauticabelowzero/mods/34 "NexusMods - SMLHelper Zero") **2.13.4 or higher** (See on the page how to install it)
+* **[QModManager 4](https://www.nexusmods.com/subnauticabelowzero/mods/1 "NexusMods - QModManager 4") 4.4.3 or higher** (See on the page how to install it)
+* **[SMLHelper Zero](https://www.nexusmods.com/subnauticabelowzero/mods/34 "NexusMods - SMLHelper Zero") 2.13.4 or higher** (See on the page how to install it)
 
 ### Step 1
 Download the mod in the [files category on the NexusMods page](https://www.nexusmods.com/subnauticabelowzero/mods/286?tab=files "NexusMods - Alterra Weaponry > Files") - If there's none, just wait for a release (however, if you're a developer you can still build it yourself as a "latest version beta")  

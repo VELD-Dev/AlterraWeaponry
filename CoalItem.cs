@@ -20,7 +20,7 @@ namespace VELDsAlterraWeaponry
         public static TechType thisTechType;
         public override string AssetsFolder => Path.Combine(Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location), "assets");
 
-        public CoalItem() : base("CoalItem", "Coal", "Coal is an essential material for advanced crafts. It can also be used as an energy source.")
+        public CoalItem() : base("CoalItem", "Coal", "C₇H₃O. Coal is an essential material for advanced crafts. It can also be used as an energy source.")
         {
             OnFinishedPatching += () =>
             {
