@@ -69,9 +69,11 @@
   <ItemGroup>
     <Compile Include="CoalItem.cs" />
     <Compile Include="BlackPowderItem.cs" />
+    <Compile Include="LanguagesHandler.cs" />
     <Compile Include="ModConfigs.cs" />
     <Compile Include="ExplosiveTorpedo.cs" />
     <Compile Include="Main.cs" />
+    <Compile Include="PDA_Patch.cs" />
     <Compile Include="PrawnLaserArm.cs" />
     <Compile Include="PrawnSelfDefenseModule.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

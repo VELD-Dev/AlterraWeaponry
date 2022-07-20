@@ -21,7 +21,7 @@ namespace VELDsAlterraWeaponry
         public static void Patch()
         {
             var assembly = Assembly.GetExecutingAssembly();
-            var modName = ($"velddev_{assembly.GetName().Name}");
+            var modName = ($"VELDs_{assembly.GetName().Name}");
             //var explosiveTorpedo = new ExplosiveTorpedo();
             Logger.Log(Logger.Level.Info, $"Patching {modName}...");
 
@@ -34,9 +34,22 @@ namespace VELDsAlterraWeaponry
             new CoalItem().Patch();
             new BlackPowderItem().Patch();
             new PrawnSelfDefenseModule().Patch();
+            new PrawnLaserArm().Patch();
 
             Logger.Log(Logger.Level.Info, "Patched successfully.");
         }
+
+        [HarmonyPatch(typeof(Player))]
+        internal class InventoryPatch
+        {
+            [HarmonyPostfix]
+            [HarmonyPatch("Awake")]
+            public static void AwakePostfix(InventoryItem item)
+            {
+                PrawnLaserArm.AddPDAEntry();
+            }
+        }
+
         public static void OnLethalItemCrafted()
         {
         }
