@@ -20,7 +20,7 @@ namespace VELDsAlterraWeaponry
 
         public override string AssetsFolder => Path.Combine(Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location), "assets");
 
-        public ExplosiveTorpedoItem() : base("ExplosiveTorpedoItem", "Explosive Torpedo", "A new lethal weapon designed by Alterra© for missions on 4546B after the result of previous Alterra© missions.")
+        public ExplosiveTorpedoItem() : base("ExplosiveTorpedoItem", "", "")
         {
             OnFinishedPatching += () =>
             {

@@ -39,14 +39,16 @@ namespace VELDsAlterraWeaponry
             Logger.Log(Logger.Level.Info, "Patched successfully.");
         }
 
-        [HarmonyPatch(typeof(Player))]
-        internal class InventoryPatch
+        [HarmonyPatch(typeof(Player), "Awake")]
+        internal class PlayerAwakePatch
         {
-            [HarmonyPostfix]
-            [HarmonyPatch("Awake")]
-            public static void AwakePostfix(InventoryItem item)
+            public static void Prefix()
             {
                 PrawnLaserArm.AddPDAEntry();
+            }
+            public static void Postfix()
+            {
+                LanguagesHandler.LanguagePatch();
             }
         }
 

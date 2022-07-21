@@ -59,7 +59,6 @@ namespace VELDsAlterraWeaponry
                 hidden: false,
                 unlocked: false
             );
-            LanguageHandler.SetLanguageLine("EncyPath_Weaponry", "Weaponry");
         }
         public override CraftTree.Type FabricatorType => CraftTree.Type.Fabricator;
         public override TechGroup GroupForPDA => TechGroup.VehicleUpgrades;

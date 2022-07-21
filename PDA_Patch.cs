@@ -45,8 +45,6 @@ namespace VELDsAlterraWeaponry
                 audio = sound ? sound : null,
                 popup = popup ? popup : null
             });
-            LanguageHandler.SetLanguageLine("Ency_" + key, name);
-            LanguageHandler.SetLanguageLine("EncyDesc_" + key, desc);
         }
     }
 }
