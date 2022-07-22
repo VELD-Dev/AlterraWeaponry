@@ -34,7 +34,7 @@ Here are few items added by the mod:
 			* Time: 3s
 			* Items: 4 Rubies, 2 Batteries, 1 Advanced Wiring Kit, 1 Seatruck Defense Perimeter Upgrade
 			* Gives: 1 Prawn Defense Perimeter Upgrade
-	* Prawn Laser Arm (1000dmg / **HIGHLY LETHAL**) - This is probably the most cheater weapon, but be careful with the energy of it
+	* Prawn Laser Arm (1000dmg / **HIGHLY LETHAL**) - This is probably the most cheated weapon, but be careful with the energy of it
 		* Required researches for unlock:
 			* Prawn Grappling Arm module
 			* Prawn Drilling Arm module
@@ -45,6 +45,13 @@ Here are few items added by the mod:
 			* Time: 60s
 			* Items: 5 Ion Cubes, 4 Ionic Powercells, 1 Prawn Torpedo Arm, 5 Rubies, 5 Diamonds, 5 Magnetites, 5 Kyanites, 2 Plasteel Ingots, 4 Quartz, 4 Coppers, 2 Advanced Wiring Kit, 2 Microchip, 1 Advanced Refractor Lu86K
 			* Gives: 1 Prawn Laser Arm
+	* Prawn Shield Generator (**DEFENSE**) - Just like the Cyclops shield, keep you invincible few seconds. Be careful, this uses a lot of battery, even if it uses less than the Prawn Laser Arm.
+		* Required researches for unlock
+			* Polyaniline
+		* Craft data:
+			* Time: 3s
+			* Items: 2 Advanced Wiring Kits, 2 Polyaniline, 1 Powercell.
+			* Gives: 1 Prawn Shield Generator
 * Resources
 	* Coal - Essential material for advanced craftings. Can be used as energy source into Biomass generator
 		* Required researches for unlock:
@@ -64,9 +71,7 @@ Here are few items added by the mod:
 			* Gives: 1 Black Powder
 	* Advanced Refractor Lu86K - An advanced technology by XenoWorx, used in high precision or very powerful mining lasers. Can handle without problem over 86.000 Lumens of reflection load.
 		* Required researches for unlock:
-			* Silver
 			* Coal
-			* Microchip
 			* Reinforced glass
 			* Synthetic fibers
 			* Benzene

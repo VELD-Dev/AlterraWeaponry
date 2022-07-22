@@ -17,6 +17,7 @@ namespace VELDsAlterraWeaponry
 {
     internal class ExplosiveTorpedoItem : Craftable
     {
+        protected static GameObject prefab;
         public static TechType ThisTechType { get; private set; } = 0;
 
         public override string AssetsFolder => Path.Combine(Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location), "assets");
@@ -29,14 +30,12 @@ namespace VELDsAlterraWeaponry
             };
         }
 
-        protected static GameObject prefab;
-
         public override CraftTree.Type FabricatorType => CraftTree.Type.Fabricator;
         public override string[] StepsToFabricatorTab => new string[] { "Upgrades", "ExosuitUpgrades" };
         public override TechGroup GroupForPDA => TechGroup.VehicleUpgrades;
         public override TechCategory CategoryForPDA => TechCategory.VehicleUpgrades;
         public override string DiscoverMessage => "Alterra® has made an exception for the expeditions on planet 4546B, and has allowed some lethal weapons. Be extremely careful, these are dangerous.";
-        public override List<TechType> CompoundTechsForUnlock => new List<TechType> { TechType.Crash, TechType.Sulphur | BlackPowderItem.thisTechType };
+        public override List<TechType> CompoundTechsForUnlock => new List<TechType> { TechType.Crash, TechType.Sulphur | BlackPowderItem.ThisTechType };
         public override float CraftingTime => 5f;
         protected override Sprite GetItemSprite()
         {
@@ -50,7 +49,7 @@ namespace VELDsAlterraWeaponry
                 Ingredients = new List<Ingredient>(new Ingredient[]
                 {
                     new Ingredient(TechType.Titanium, 1),
-                    new Ingredient(BlackPowderItem.thisTechType, 2)
+                    new Ingredient(BlackPowderItem.ThisTechType, 2)
                 })
             };
         }
@@ -59,7 +58,7 @@ namespace VELDsAlterraWeaponry
         {
             if(prefab == null)
             {
-                CoroutineTask<GameObject> task = CraftData.GetPrefabForTechTypeAsync(TechType.GasTorpedo);
+                CoroutineTask<GameObject> task = CraftData.GetPrefabForTechTypeAsync(TechType.WhirlpoolTorpedo);
                 yield return gameObject;
 
                 prefab = GameObject.Instantiate(task.GetResult());

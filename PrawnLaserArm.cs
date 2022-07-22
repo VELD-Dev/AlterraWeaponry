@@ -51,6 +51,7 @@ namespace VELDsAlterraWeaponry
                 craftAmount = 1,
                 Ingredients = new List<Ingredient> (new Ingredient[]
                 {
+                    new Ingredient(AdvancedRefractor.ThisTechType, 1),
                     new Ingredient(TechType.PlasteelIngot, 2),
                     new Ingredient(TechType.Quartz, 4),
                     new Ingredient(TechType.Copper, 4),

@@ -59,6 +59,10 @@
     <Reference Include="UnityEngine">
       <HintPath>I:\SteamLibrary\steamapps\common\SubnauticaZero\SubnauticaZero_Data\Managed\UnityEngine.dll</HintPath>
     </Reference>
+    <Reference Include="UnityEngine.AudioModule, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>I:\SteamLibrary\steamapps\common\SubnauticaZero\SubnauticaZero_Data\Managed\UnityEngine.AudioModule.dll</HintPath>
+    </Reference>
     <Reference Include="UnityEngine.CoreModule">
       <HintPath>I:\SteamLibrary\steamapps\common\SubnauticaZero\SubnauticaZero_Data\Managed\UnityEngine.CoreModule.dll</HintPath>
     </Reference>
@@ -67,8 +71,10 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AdvancedRefractor.cs" />
     <Compile Include="CoalItem.cs" />
     <Compile Include="BlackPowderItem.cs" />
+    <Compile Include="MessagesHandler.cs" />
     <Compile Include="LanguagesHandler.cs" />
     <Compile Include="ModConfigs.cs" />
     <Compile Include="ExplosiveTorpedo.cs" />
@@ -88,7 +94,9 @@
     <Content Include=".gitignore" />
     <Content Include="assets\CoalItem.png" />
     <Content Include="assets\ExplosiveTorpedo.png" />
+    <Content Include="assets\first_lethal_weapon_message.mp3" />
     <Content Include="assets\PrawnPerimeterDefense.png" />
+    <Content Include="assets\xenoworx_pda_presentation.mp3" />
     <Content Include="LICENSE.txt" />
     <Content Include="Localizations.xml" />
   </ItemGroup>

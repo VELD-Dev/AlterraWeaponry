@@ -17,18 +17,17 @@ namespace VELDsAlterraWeaponry
 {
     internal class CoalItem : Craftable
     {
-        public static TechType thisTechType;
+        public static GameObject prefab;
+        public static TechType ThisTechType { get; private set; } = 0;
         public override string AssetsFolder => Path.Combine(Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location), "assets");
 
         public CoalItem() : base("Coal", "Coal", "Tooltip_Coal")
         {
             OnFinishedPatching += () =>
             {
-                thisTechType = TechType;
+                ThisTechType = TechType;
             };
         }
-
-        protected static GameObject prefab;
 
         public override CraftTree.Type FabricatorType => CraftTree.Type.Fabricator;
         public override string[] StepsToFabricatorTab => new string[] { "Resources", "BasicMaterials" };
@@ -57,7 +56,7 @@ namespace VELDsAlterraWeaponry
         {
             if (prefab == null)
             {
-                CoroutineTask<GameObject> task = CraftData.GetPrefabForTechTypeAsync(TechType.PrecursorSanctuaryCube);
+                CoroutineTask<GameObject> task = CraftData.GetPrefabForTechTypeAsync(TechType.Titanium);
                 yield return task;
 
                 prefab = GameObject.Instantiate(task.GetResult());
