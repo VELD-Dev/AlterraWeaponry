@@ -98,10 +98,11 @@
     </PreBuildEvent>
   </PropertyGroup>
   <PropertyGroup>
-    <PostBuildEvent>mkdir "I:\SteamLibrary\steamapps\common\SubnauticaZero\QMods\$(TargetName)"
-copy /Y "$(TargetPath)" "I:\SteamLibrary\steamapps\common\SubnauticaZero\QMods\$(TargetName)"
-copy /Y "$(ProjectDir)\mod.json" "I:\SteamLibrary\steamapps\common\SubnauticaZero\QMods\$(TargetName)\mod.json"
-copy /Y "$(ProjectDir)\assets\" "I:\SteamLibrary\steamapps\common\SubnauticaZero\QMods\$(TargetName)\assets\"
-copy /Y "$(ProjectDir)\Localizations.xml" "I:\SteamLibrary\steamapps\common\SubnauticaZero\QMods\$(TargetName)\Localizations.xml"</PostBuildEvent>
+    <PostBuildEvent>mkdir "I:\SteamLibrary\steamapps\common\SubnauticaZero\QMods\VELDsAlterraWeaponry"
+mkdir "I:\SteamLibrary\steamapps\common\SubnauticaZero\QMods\VELDsAlterraWeaponry\assets"
+copy /Y "$(TargetPath)" "I:\SteamLibrary\steamapps\common\SubnauticaZero\QMods\VELDsAlterraWeaponry\"
+copy /Y "$(ProjectDir)\mod.json" "I:\SteamLibrary\steamapps\common\SubnauticaZero\QMods\VELDsAlterraWeaponry\mod.json"
+copy /Y "$(ProjectDir)\assets\" "I:\SteamLibrary\steamapps\common\SubnauticaZero\QMods\VELDsAlterraWeaponry\assets\"
+copy /Y "$(ProjectDir)\Localizations.xml" "I:\SteamLibrary\steamapps\common\SubnauticaZero\QMods\VELDsAlterraWeaponry\Localizations.xml"</PostBuildEvent>
   </PropertyGroup>
 </Project>
