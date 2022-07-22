@@ -34,7 +34,6 @@ namespace VELDsAlterraWeaponry
         public override string[] StepsToFabricatorTab => new string[] { "Upgrades", "ExosuitUpgrades" };
         public override TechGroup GroupForPDA => TechGroup.VehicleUpgrades;
         public override TechCategory CategoryForPDA => TechCategory.VehicleUpgrades;
-        public override string DiscoverMessage => "Alterra® has made an exception for the expeditions on planet 4546B, and has allowed some lethal weapons. Be extremely careful, these are dangerous.";
         public override List<TechType> CompoundTechsForUnlock => new List<TechType> { TechType.Crash, TechType.Sulphur | BlackPowderItem.ThisTechType };
         public override float CraftingTime => 5f;
         protected override Sprite GetItemSprite()

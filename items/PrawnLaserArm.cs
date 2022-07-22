@@ -34,7 +34,6 @@ namespace VELDsAlterraWeaponry
         public override TechCategory CategoryForPDA => TechCategory.VehicleUpgrades;
         public override List<TechType> CompoundTechsForUnlock => new List<TechType> { TechType.ExosuitDrillArmModule, TechType.ExosuitTorpedoArmModule, TechType.ExosuitGrapplingArmModule };
         public override float CraftingTime => 60f;
-        public override string DiscoverMessage => "This tool is the result of a collaboration between XenoWorx® and Alterra®. Originally imaginated to extract ores, it have been misused and used as a weapon by a crazy miner on the planet Obraxis Prime. After this event, Alterra® and XenoWorx® have totally stopped working together. To avoid a drama, Alterra® left this blueprint under XenoWorx® possession.";
         public override EquipmentType EquipmentType => EquipmentType.ExosuitArm;
         public override string[] StepsToFabricatorTab => new string[] { "Upgrades", "ExosuitUpgrades" };
         public static void AddPDAEntry()

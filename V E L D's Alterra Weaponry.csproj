@@ -71,17 +71,17 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AdvancedRefractor.cs" />
-    <Compile Include="CoalItem.cs" />
-    <Compile Include="BlackPowderItem.cs" />
-    <Compile Include="MessagesHandler.cs" />
-    <Compile Include="LanguagesHandler.cs" />
-    <Compile Include="ModConfigs.cs" />
-    <Compile Include="ExplosiveTorpedo.cs" />
+    <Compile Include="items\AdvancedRefractor.cs" />
+    <Compile Include="items\CoalItem.cs" />
+    <Compile Include="items\BlackPowderItem.cs" />
+    <Compile Include="utility\MessagesHandler.cs" />
+    <Compile Include="utility\LanguagesHandler.cs" />
+    <Compile Include="utility\ModConfigs.cs" />
+    <Compile Include="items\ExplosiveTorpedo.cs" />
     <Compile Include="Main.cs" />
-    <Compile Include="PDA_Patch.cs" />
-    <Compile Include="PrawnLaserArm.cs" />
-    <Compile Include="PrawnSelfDefenseModule.cs" />
+    <Compile Include="utility\PDA_Patch.cs" />
+    <Compile Include="items\PrawnLaserArm.cs" />
+    <Compile Include="items\PrawnSelfDefenseModule.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
