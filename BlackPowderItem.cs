@@ -22,7 +22,7 @@ namespace VELDsAlterraWeaponry
 
         public override string AssetsFolder => Path.Combine(Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location), "assets");
 
-        public BlackPowderItem() : base("BlackPowderItem", "Black powder", "10KNO₃+4S+2C₇H₃O. Since Alterra® has allowed weapons for expeditions on 4546B, black powder have been added to the PDA. What are you goind to do with that ??")
+        public BlackPowderItem() : base("BlackPowder", "BlackPowder", "Tooltip_BlackPowder")
         {
             OnFinishedPatching += () =>
             {
