@@ -12,13 +12,13 @@ namespace VELDsAlterraWeaponry
     [Menu("Alterra® Weaponry™")]
     public class ModConfigs : ConfigFile
     {
-        [Toggle(/*LabelLanguageId = "Options.DialogsBool",*/ Label = "Allow Dialogs", Tooltip = "Whether or not dialog boxes about the lore of the Alterra Weaponry will appear at the first lethal weapon have been build.")]
+        [Toggle(LabelLanguageId = "Options.DialogsBool", TooltipLanguageId = "Options.DialogsBool.Tooltip")]
         public bool DialogsEnabled = true;
 
-        [Slider(/*LabelLanguageId = "Options.dmgMultiplier",*/ Label = "Damage multiplier", Tooltip = "The damage multiplier of the lethal weapons.", Min = 0.25f, Max = 5.0f, DefaultValue = 1.0f, Format = "{0:F2}")]
+        [Slider(LabelLanguageId = "Options.dmgMultiplier", TooltipLanguageId = "Options.dmgMultiplier.Tooltip", Min = 0.25f, Max = 5.0f, DefaultValue = 1.0f, Format = "×{0:F2}")]
         public float dmgMultiplier = 1.0f;
 
-        [Keybind(/*LabelLanguageId = "Options.KeybindPrawnSpecial",*/ "Prawn Special", Tooltip = "Specials can also be called 'Modules Abilities', for example a self-defense system (like the Seatruck one).")]
+        [Keybind(LabelLanguageId = "Options.KeybindPrawnSpecial", TooltipLanguageId = "Options.KeybindPrawnSpecial.Tooltip")]
         public KeyCode specialKey = KeyCode.V;
     }
 }

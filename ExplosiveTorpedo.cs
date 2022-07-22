@@ -11,20 +11,21 @@ using System.Text;
 using System.Threading.Tasks;
 using UnityEngine;
 using Logger = QModManager.Utility.Logger;
+using UWE;
 
 namespace VELDsAlterraWeaponry
 {
     internal class ExplosiveTorpedoItem : Craftable
     {
-        public static TechType thisTechType;
+        public static TechType ThisTechType { get; private set; } = 0;
 
         public override string AssetsFolder => Path.Combine(Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location), "assets");
 
-        public ExplosiveTorpedoItem() : base("ExplosiveTorpedoItem", "", "")
+        public ExplosiveTorpedoItem() : base("ExplosiveTorpedoItem", "ExplosiveTorpedoItem", "Tooltip_ExplosiveTorpedoItem")
         {
             OnFinishedPatching += () =>
             {
-                thisTechType = TechType;
+                ThisTechType = TechType;
             };
         }
 

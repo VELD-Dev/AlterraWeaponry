@@ -26,26 +26,26 @@ namespace VELDsAlterraWeaponry
             Logger.Log(Logger.Level.Info, $"Patching {modName}...");
 
             Harmony harmony = new Harmony(modName);
-            harmony.PatchAll(assembly);
+            harmony.PatchAll(typeof(GameSettingsPatch));
 
             Config = OptionsPanelHandler.Main.RegisterModOptions<ModConfigs>();
+            PrawnLaserArm.AddPDAEntry();
+            PrawnSelfDefenseModule.AddPDAEntry();
 
-            new ExplosiveTorpedoItem().Patch();
             new CoalItem().Patch();
             new BlackPowderItem().Patch();
+            new ExplosiveTorpedoItem().Patch();
             new PrawnSelfDefenseModule().Patch();
             new PrawnLaserArm().Patch();
+
+            LanguagesHandler.LanguagePatch();
 
             Logger.Log(Logger.Level.Info, "Patched successfully.");
         }
 
-        [HarmonyPatch(typeof(Player), "Awake")]
-        internal class PlayerAwakePatch
+        [HarmonyPatch(typeof(GameSettings), nameof(GameSettings.SaveAsync))]
+        internal class GameSettingsPatch
         {
-            public static void Prefix()
-            {
-                PrawnLaserArm.AddPDAEntry();
-            }
             public static void Postfix()
             {
                 LanguagesHandler.LanguagePatch();
