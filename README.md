@@ -114,7 +114,7 @@ First ! Everywhere I put "®", "™" and other deposed symbols **DOES NOT MEAN**
 If you notice any bug, do not forget to create an **[Issue report](https://github.com/VELD-Dev/AlterraWeaponry/issues "Issues")** on the GitHub page, it helps me a lot ! (but do not forget to check if this bug haven't already been reported, I hate duplicates)  
 I love *Markdown* files, they are so full of possibilities that's insane
   
-If you want to contact me, here's my Discord: `V E L D#6585` (my previous tag was #7070, I'm so sad to have lost it ;-;) 
+If you want to contact me, here's my Discord: `V E L D#6585`
 
 ## General information
 
