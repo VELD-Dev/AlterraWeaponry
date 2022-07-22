@@ -102,20 +102,13 @@ Enjoy your play with ported and brand new weapons & upgrades ! Do not be scared 
 ### Disclaimer
 First ! Everywhere I put "®", "™" and other deposed symbols **DOES NOT MEAN** that I possess these, it's **EXCLUSIVELY** for the style
 
-### Credits
-I really thank **[Nagorrogan](https://github.com/Nagorogan "Nagorrogan's GitHub account")** for her precious help with the Subnautica programming.  
-> Todo:  
-> Understand code
+### Special thanks
 
-I also sincerely thank **Tom Stone** for the icons of the items, weapons and all these stuff in you PDA Inventory.  
-> Doable  
+- **[Nagorrogan](https://github.com/Nagorogan)** - Explaining me how to mod Subnautica (BZ)
+- **TomStone** - Making icons for some items
+- **[PrimeSonic](https://github.com/PrimeSonic/)** - Helping me with the XML Localization system
+- **[tobeyStraitjacket](https://github.com/toebeann)** - Helping with the Languages handling, explaining me how work HarmonyPatch stuff, and how I have to use this for my mod and also making a specific version of SMLHelper to translate options tooltip of mods.
 
-HUGE THANKS to **[PrimeSonic]()** for helping me with the Localization and XML reading systems !
-> Thanks for the help, Tobey
-> I'd kiss you if I could  
-
-Thanks to **[tobeyStraitjacket]()** for helping me with the language system, and for modifiying SMLHelper to add a little thing for the mod (option tooltips language ID, coule also be useful for other modders)
-> Let me dive deeper  
 
 ### Additional information
 If you notice any bug, do not forget to create an **[Issue report](https://github.com/VELD-Dev/AlterraWeaponry/issues "Issues")** on the GitHub page, it helps me a lot ! (but do not forget to check if this bug haven't already been reported, I hate duplicates)  
