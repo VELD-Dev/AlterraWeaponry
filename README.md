@@ -108,7 +108,14 @@ I really thank **[Nagorrogan](https://github.com/Nagorogan "Nagorrogan's GitHub 
 > Understand code
 
 I also sincerely thank **Tom Stone** for the icons of the items, weapons and all these stuff in you PDA Inventory.  
-> Doable
+> Doable  
+
+HUGE THANKS to **[PrimeSonic]()** for helping me with the Localization and XML reading systems !
+> Thanks for the help, Tobey
+> I'd kiss you if I could  
+
+Thanks to **[tobeyStraitjacket]()** for helping me with the language system, and for modifiying SMLHelper to add a little thing for the mod (option tooltips language ID, coule also be useful for other modders)
+> Let me dive deeper  
 
 ### Additional information
 If you notice any bug, do not forget to create an **[Issue report](https://github.com/VELD-Dev/AlterraWeaponry/issues "Issues")** on the GitHub page, it helps me a lot ! (but do not forget to check if this bug haven't already been reported, I hate duplicates)  
