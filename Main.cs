@@ -4,6 +4,10 @@ using HarmonyLib;
 using QModManager.Utility;
 using QModManager.API.ModLoading;
 using System.IO;
+using System.Text;
+using System.Threading.Tasks;
+using System.Collections.Generic;
+using System;
 
 using SMLHelper.V2.Json;
 using SMLHelper.V2.Options.Attributes;
@@ -29,8 +33,7 @@ namespace VELDsAlterraWeaponry
             var prawnLaserArm = new PrawnLaserArm();
             Logger.Log(Logger.Level.Info, $"Patching {modName}...");
 
-            Harmony harmony = new Harmony(modName);
-            harmony.PatchAll(typeof(GameSettingsPatch));
+            Harmony.CreateAndPatchAll(Assembly.GetExecutingAssembly(), modName);
 
             Config = OptionsPanelHandler.Main.RegisterModOptions<ModConfigs>();
             PrawnLaserArm.AddPDAEntry();
@@ -45,8 +48,8 @@ namespace VELDsAlterraWeaponry
             new PrawnSelfDefenseModule().Patch();
             prawnLaserArm.Patch();
 
-            OnPickup.techTypes.AddItem(explosiveTorpedo.TechType);
-            OnPickup.techTypes.AddItem(prawnLaserArm.TechType);
+            OnPickup.techTypes.Add(explosiveTorpedo.TechType);
+            OnPickup.techTypes.Add(prawnLaserArm.TechType);
 
             LanguagesHandler.LanguagePatch();
             Logger.Log(Logger.Level.Info, "Patched successfully.");
@@ -68,23 +71,27 @@ namespace VELDsAlterraWeaponry
             [HarmonyPatch("Start")]
             public static void StartPatch()
             {
+                Logger.Log(Logger.Level.Info, "START EVENT - Should play an audio right now !!");
                 PDASounds.queue.Play("presentation", SoundHost.PDA, true, subtitles: "Subtitles_AWPresentation");
+                Logger.Log(Logger.Level.Info, "Presentation audio has played.");
             }
         }
     }
 
     public class OnPickup : MonoBehaviour
     {
-        public static TechType[] techTypes;
+        public static List<TechType> techTypes = new List<TechType>();
 
         public void OnExamine()
         {
+            Logger.Log(Logger.Level.Info, "Should try to see if a picked-up item is registered in techTypes", showOnScreen: true);
             foreach(var techType in techTypes)
             {
                 if (KnownTech.Contains(techType)) return;
             }
+            Logger.Log(Logger.Level.Info, "Yes, it should play an audio right now !!", showOnScreen: true);
             PDASounds.queue.Play("first_lethal", SoundHost.PDA, true, subtitles: "Subtitles_AWFirstLethal");
-            PDAEncyclopedia.Add("ExplosiveTorpedo", false, true);
+            PDAEncyclopedia.Reveal("ExplosiveTorpedo", false);
         }
     }
 }

@@ -65,7 +65,7 @@ namespace VELDsAlterraWeaponry
                     new Ingredient(TechType.ExosuitGrapplingArmModule, 1),
                     new Ingredient(TechType.PrecursorIonCrystal, 5),
                     new Ingredient(TechType.PrecursorIonPowerCell, 2)
-                }) // DO NOT FORGET TO ADD THE FUCKING ADVANCED REFLECTOR Lu86K
+                })
             };
         }
 
@@ -86,6 +86,8 @@ namespace VELDsAlterraWeaponry
 
             GameObject go = GameObject.Instantiate(prefab);
             gameObject.Set(go);
+
+            go.AddComponent<OnPickup>();
         }
     }
 }

@@ -43,7 +43,6 @@ namespace VELDsAlterraWeaponry
     {
         private static string ModPath = Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location);
         private static string filename = "Localizations.xml";
-        private string actuallyLoadedLanguage;
         public static void LanguagePatch()
         {
             Logger.Log(Logger.Level.Info, "Starting patching the languages !");

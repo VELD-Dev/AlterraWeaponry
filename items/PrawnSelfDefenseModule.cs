@@ -37,7 +37,7 @@ namespace VELDsAlterraWeaponry
         public override CraftTree.Type FabricatorType => CraftTree.Type.Fabricator;
         public override string[] StepsToFabricatorTab => new string[] { "Upgrades", "ExosuitUpgrades" };
         public override float CraftingTime => 3f;
-        public override QuickSlotType QuickSlotType => QuickSlotType.Selectable;
+        public override QuickSlotType QuickSlotType => QuickSlotType.Instant;
         protected override Sprite GetItemSprite()
         {
             return ImageUtils.LoadSpriteFromFile(Path.Combine(AssetsFolder, "PrawnPerimeterDefense.png"));

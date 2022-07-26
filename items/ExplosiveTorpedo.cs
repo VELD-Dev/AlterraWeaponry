@@ -65,6 +65,8 @@ namespace VELDsAlterraWeaponry
 
             GameObject go = GameObject.Instantiate(prefab);
             gameObject.Set(go);
+
+            go.AddComponent<OnPickup>();
         }
     }
 }

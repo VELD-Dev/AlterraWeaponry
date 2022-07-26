@@ -33,7 +33,7 @@ namespace VELDsAlterraWeaponry
         public override float CraftingTime => 3f;
         public override CraftTree.Type FabricatorType => CraftTree.Type.Fabricator;
         public override string[] StepsToFabricatorTab => new string[] { "Resources", "Electronics" };
-        public override List<TechType> CompoundTechsForUnlock => new List<TechType> { TechType.ReinforcedGlass, TechType.Fiber, TechType.Benzene, CoalItem.ThisTechType };
+        public override List<TechType> CompoundTechsForUnlock => new List<TechType> { TechType.EnameledGlass, TechType.AramidFibers, TechType.Benzene, CoalItem.ThisTechType };
         protected override Sprite GetItemSprite()
         {
             return ImageUtils.LoadSpriteFromFile(Path.Combine(AssetsFolder, "PrawnPerimeterDefense.png"));
@@ -48,9 +48,9 @@ namespace VELDsAlterraWeaponry
                     new Ingredient(CoalItem.ThisTechType, 1),
                     new Ingredient(TechType.Silver, 4),
                     new Ingredient(TechType.ComputerChip, 1),
-                    new Ingredient(TechType.Fiber, 2),
+                    new Ingredient(TechType.AramidFibers, 2),
                     new Ingredient(TechType.Benzene, 1),
-                    new Ingredient(TechType.ReinforcedGlass, 4)
+                    new Ingredient(TechType.EnameledGlass, 4)
                 })
             };
         }
