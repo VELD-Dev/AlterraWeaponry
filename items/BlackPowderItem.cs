@@ -30,7 +30,7 @@ namespace VELDsAlterraWeaponry
             };
         }
 
-        public override List<TechType> CompoundTechsForUnlock => new List<TechType> { TechType.Crash, TechType.Sulphur, TechType.JeweledDiskPiece, CoalItem.ThisTechType }; // DO NOT FORGET TO ADD CreepvineCoal.thisTechType
+        public override TechType RequiredForUnlock => TechType.Sulphur;
         public override TechGroup GroupForPDA => TechGroup.Resources;
         public override TechCategory CategoryForPDA => TechCategory.AdvancedMaterials;
         public override CraftTree.Type FabricatorType => CraftTree.Type.Fabricator;

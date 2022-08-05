@@ -21,7 +21,6 @@ Here are few items added by the mod:
 * Weapons & Upgrades
 	* Explosive Torpedoes (250dmg / **LETHAL**) - This torpedo make explosions in a short radius.
 		* Required researches for unlock:
-			* Crashfish scan
 			* Sulphur
 		* Craft data:
 			* Time: 5s
@@ -36,11 +35,7 @@ Here are few items added by the mod:
 			* Gives: 1 Prawn Defense Perimeter Upgrade
 	* Prawn Laser Arm (1000dmg / **HIGHLY LETHAL**) - This is probably the most cheated weapon, but be careful with the energy of it
 		* Required researches for unlock:
-			* Prawn Grappling Arm module
-			* Prawn Drilling Arm module
-			* Prawn Torpedo Arm module
 			* Ion cube
-			* Ionic powercells
 		* Craft data:
 			* Time: 60s
 			* Items: 5 Ion Cubes, 4 Ionic Powercells, 1 Prawn Torpedo Arm, 5 Rubies, 5 Diamonds, 5 Magnetites, 5 Kyanites, 2 Plasteel Ingots, 4 Quartz, 4 Coppers, 2 Advanced Wiring Kit, 2 Microchip, 1 Advanced Refractor Lu86K
@@ -63,18 +58,13 @@ Here are few items added by the mod:
 	* Black Powder - Essential material for crafting of explosive gadgets and weapons. What are you going to do with ??
 		* Required researches for unlock:
 			* Sulphur
-			* Coal
-			* Coral Sample
 		* Craft data:
 			* Time: 3s
 			* Items: 1 Coal, 1 Sulphur, 3 Coral Samples
 			* Gives: 1 Black Powder
 	* Advanced Refractor Lu86K - An advanced technology by XenoWorx, used in high precision or very powerful mining lasers. Can handle without problem over 86.000 Lumens of reflection load.
 		* Required researches for unlock:
-			* Coal
-			* Reinforced glass
 			* Synthetic fibers
-			* Benzene
 		* Craft data:
 			* Time: 15s
 			* Items: 4 Silvers, 1 Coal, 4 Reinforced Glass, 1 Microchip, 2 Synthetic Fibers, 1 Benzene

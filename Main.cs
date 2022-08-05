@@ -31,6 +31,7 @@ namespace VELDsAlterraWeaponry
             var modName = ($"VELDs_{assembly.GetName().Name}");
             var explosiveTorpedo = new ExplosiveTorpedoItem();
             var prawnLaserArm = new PrawnLaserArm();
+            var prawnDefUpgrade = new PrawnSelfDefenseModule();
             Logger.Log(Logger.Level.Info, $"Patching {modName}...");
 
             Harmony.CreateAndPatchAll(Assembly.GetExecutingAssembly(), modName);
@@ -45,8 +46,10 @@ namespace VELDsAlterraWeaponry
             new BlackPowderItem().Patch();
             new AdvancedRefractor().Patch();
             explosiveTorpedo.Patch();
-            new PrawnSelfDefenseModule().Patch();
+            prawnDefUpgrade.Patch();
             prawnLaserArm.Patch();
+
+            
 
             OnPickup.techTypes.Add(explosiveTorpedo.TechType);
             OnPickup.techTypes.Add(prawnLaserArm.TechType);
@@ -92,6 +95,20 @@ namespace VELDsAlterraWeaponry
             Logger.Log(Logger.Level.Info, "Yes, it should play an audio right now !!", showOnScreen: true);
             PDASounds.queue.Play("first_lethal", SoundHost.PDA, true, subtitles: "Subtitles_AWFirstLethal");
             PDAEncyclopedia.Reveal("ExplosiveTorpedo", false);
+        }
+    }
+
+    [HarmonyPatch(typeof(Vehicle))]
+    internal class ExosuitPatches
+    {
+        [HarmonyPatch("OnUpgradeModuleUse")]
+        public static void Postfix(TechType techType, Vehicle vehicle)
+        {
+            if (techType == PrawnSelfDefenseModule.thisTechType)
+            {
+                Logger.Log(Logger.Level.Debug, "Input received", showOnScreen: true);
+                // PrawnSelfDefenseModule.ExosuitDefenseMono.Use(vehicle);
+            }
         }
     }
 }

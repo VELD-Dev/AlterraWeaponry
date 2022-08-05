@@ -73,7 +73,6 @@
     <Compile Include="items\AdvancedRefractor.cs" />
     <Compile Include="items\CoalItem.cs" />
     <Compile Include="items\BlackPowderItem.cs" />
-    <Compile Include="patches\ExosuitDefensePatch.cs" />
     <Compile Include="utility\MessagesHandler.cs" />
     <Compile Include="utility\LanguagesHandler.cs" />
     <Compile Include="utility\ModConfigs.cs" />

@@ -34,7 +34,7 @@ namespace VELDsAlterraWeaponry
         public override string[] StepsToFabricatorTab => new string[] { "Upgrades", "ExosuitUpgrades" };
         public override TechGroup GroupForPDA => TechGroup.VehicleUpgrades;
         public override TechCategory CategoryForPDA => TechCategory.VehicleUpgrades;
-        public override List<TechType> CompoundTechsForUnlock => new List<TechType> { TechType.Crash, TechType.Sulphur | BlackPowderItem.ThisTechType };
+        public override TechType RequiredForUnlock => BlackPowderItem.ThisTechType;
         public override float CraftingTime => 5f;
         protected override Sprite GetItemSprite()
         {

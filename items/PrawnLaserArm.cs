@@ -32,7 +32,7 @@ namespace VELDsAlterraWeaponry
         protected static GameObject prefab;
 
         public override TechCategory CategoryForPDA => TechCategory.VehicleUpgrades;
-        public override List<TechType> CompoundTechsForUnlock => new List<TechType> { TechType.ExosuitDrillArmModule, TechType.ExosuitTorpedoArmModule, TechType.ExosuitGrapplingArmModule };
+        public override TechType RequiredForUnlock => TechType.PrecursorSanctuaryCube;
         public override float CraftingTime => 60f;
         public override EquipmentType EquipmentType => EquipmentType.ExosuitArm;
         public override string[] StepsToFabricatorTab => new string[] { "Upgrades", "ExosuitUpgrades" };
