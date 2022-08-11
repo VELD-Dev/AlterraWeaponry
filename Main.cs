@@ -102,12 +102,14 @@ namespace VELDsAlterraWeaponry
     internal class ExosuitPatches
     {
         [HarmonyPatch("OnUpgradeModuleUse")]
-        public static void Postfix(TechType techType, Vehicle vehicle)
+        public static void Postfix(TechType techType, Vehicle __instance)
         {
             if (techType == PrawnSelfDefenseModule.thisTechType)
             {
                 Logger.Log(Logger.Level.Debug, "Input received", showOnScreen: true);
-                // PrawnSelfDefenseModule.ExosuitDefenseMono.Use(vehicle);
+                if (!__instance.TryGetComponent(out PrawnSelfDefenseModule.ExosuitDefenseMono defenseMono))
+                    return;
+                defenseMono.Use()
             }
         }
     }

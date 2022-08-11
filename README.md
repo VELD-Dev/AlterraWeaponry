@@ -76,7 +76,7 @@ Install process in few steps.
 
 ### Dependecies
 * **[QModManager 4](https://www.nexusmods.com/subnauticabelowzero/mods/1 "NexusMods - QModManager 4") 4.4.3 or higher** (See on the page how to install it)
-* **[SMLHelper Zero](https://www.nexusmods.com/subnauticabelowzero/mods/34 "NexusMods - SMLHelper Zero") 2.13.4 or higher** (See on the page how to install it)
+* **[SMLHelper Zero](https://www.nexusmods.com/subnauticabelowzero/mods/34 "NexusMods - SMLHelper Zero") 2.13.5 or higher** (See on the page how to install it)
 
 ### Step 1
 Download the mod in the [files category on the NexusMods page](https://www.nexusmods.com/subnauticabelowzero/mods/286?tab=files "NexusMods - Alterra Weaponry > Files") - If there's none, just wait for a release (however, if you're a developer you can still build it yourself as a "latest version beta")  

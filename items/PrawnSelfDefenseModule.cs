@@ -108,7 +108,7 @@ namespace VELDsAlterraWeaponry
                 return mixin.IsAlive();
             }
 
-            public static bool Use(Vehicle exosuit, GameObject obj)
+            public bool Use(Vehicle exosuit, GameObject obj)
             {
                 if (Time.time < timeNextUse)
                     return true;
