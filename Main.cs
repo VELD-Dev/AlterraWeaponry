@@ -39,6 +39,7 @@ namespace VELDsAlterraWeaponry
             Config = OptionsPanelHandler.Main.RegisterModOptions<ModConfigs>();
             PrawnLaserArm.AddPDAEntry();
             PrawnSelfDefenseModule.AddPDAEntry();
+            PDA_Patch.AddPDAEntry("AWModInfo", "Meta", hidden: true, unlocked: true);
             MessagesHandler.AddMessageEntry("presentation", Path.Combine(AssetFolder, "xenoworx_pda_presentation.mp3"));
             MessagesHandler.AddMessageEntry("first_lethal", Path.Combine(AssetFolder, "first_lethal_weapon_message.mp3"));
 
@@ -107,9 +108,22 @@ namespace VELDsAlterraWeaponry
             if (techType == PrawnSelfDefenseModule.thisTechType)
             {
                 Logger.Log(Logger.Level.Debug, "Input received", showOnScreen: true);
-                if (!__instance.TryGetComponent(out PrawnSelfDefenseModule.ExosuitDefenseMono defenseMono))
+                if (!__instance.TryGetComponent(out PrawnSelfDefenseModule.ShockFunctionality defenseMono))
                     return;
-                defenseMono.Use()
+                defenseMono.Use(__instance, __instance.gameObject);
+            }
+        }
+    }
+
+    [HarmonyPatch(typeof(VehicleUpgradeConsoleInput))]
+    internal class UpgradesPatch
+    {
+        [HarmonyPatch("OnUpgradeModuleChange")]
+        public static void Postfix(VehicleUpgradeConsoleInput __instance, TechType techType, bool added)
+        {
+            if(techType == PrawnSelfDefenseModule.thisTechType)
+            {
+
             }
         }
     }

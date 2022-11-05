@@ -38,7 +38,7 @@ namespace VELDsAlterraWeaponry
         public override string[] StepsToFabricatorTab => new string[] { "Upgrades", "ExosuitUpgrades" };
         public static void AddPDAEntry()
         {
-            PDA_Patch.AddPDAEntry("PrawnLaserArm", "Weaponry");
+            PDA_Patch.AddPDAEntry("PrawnLaserArm", "Tech/Weaponry");
         }
         public override CraftTree.Type FabricatorType => CraftTree.Type.Fabricator;
         public override TechGroup GroupForPDA => TechGroup.VehicleUpgrades;

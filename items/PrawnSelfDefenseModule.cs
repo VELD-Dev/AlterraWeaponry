@@ -11,6 +11,7 @@ using SMLHelper.V2.Assets;
 using SMLHelper.V2.Crafting;
 using SMLHelper.V2.Utility;
 using UnityEngine;
+using Logger = QModManager.Utility.Logger;
 
 namespace VELDsAlterraWeaponry
 {
@@ -44,7 +45,7 @@ namespace VELDsAlterraWeaponry
         }
         public static void AddPDAEntry()
         {
-            PDA_Patch.AddPDAEntry("PrawnDefensePerimeter", "Weaponry");
+            PDA_Patch.AddPDAEntry("PrawnDefensePerimeter", "Tech/Weaponry");
         }
         protected override RecipeData GetBlueprintRecipe()
         {
@@ -75,26 +76,44 @@ namespace VELDsAlterraWeaponry
             gameObject.Set(go);
         }
 
-        internal class ExosuitDefenseMono : MonoBehaviour
-        {
-            private static GameObject seaTruckPerimeterDefensePrefab = null;
-            public static GameObject DefensePerimeterPrefab => seaTruckPerimeterDefensePrefab ??
-                (seaTruckPerimeterDefensePrefab = CraftData.GetPrefabForTechTypeAsync(TechType.SeaTruckUpgradePerimeterDefense).GetResult());
 
-            private const float EnergyCostPerUse = 1f;
-            private const float Power = 2.5f;
-            private const float DamageMultiplier = 1f;
+
+        /*
+
+        SHOCK FUNCTIONALITY
+
+         */
+
+        internal class ShockFunctionality : MonoBehaviour // Thanks to EldritchCarMaker, and indirectly to PrimeSonic 👍
+        {
+            private IEnumerator<GameObject> SetupSeatruckPrefab()
+            {
+                var seatruckElectricalDefensePF = CraftData.GetPrefabForTechTypeAsync(TechType.SeaTruck).GetResult().GetComponent<SeaTruckUpgrades>().electricalDefensePrefab;
+                yield return seatruckElectricalDefensePF;
+            }
+            private void Start()
+            {
+                StartCoroutine(nameof(SetupSeatruckPrefab));
+            }
+            private GameObject seamothElectricalDefensePrefab = null;
+            public GameObject ElectricalDefensePrefab => seamothElectricalDefensePrefab ??
+                (seamothElectricalDefensePrefab = SetupSeatruckPrefab().Current);
+
+            private const float EnergyCostPerShock = 5;
+            private const float ShockPower = 6f;
             private const float BaseCharge = 2f;
             private const float BaseRadius = 1f;
 
-            private static float DirectDefDamage = (BaseRadius + Power * BaseCharge) * DamageMultiplier * 0.5f;
+            public const float ShockCooldown = 10f;
+            public float timeNextZap = 0;
+            private static float DamageMultiplier => AlterraWeaponry.Config.dmgMultiplier;
+            private static float DirectZapDamage = (BaseRadius + ShockPower * BaseCharge) * DamageMultiplier * 0.5f;
+            // Calculations and initial values based off ElectricalDefense component
 
-            public static float DefenseCooldown = 5f;
-            public static float timeNextUse = 0;
-
-            public static bool AbleToUse(Vehicle exosuit)
+            public static bool AbleToShock(Vehicle vehicle)
             {
-                if (GameModeUtils.RequiresPower() && exosuit.GetComponent<EnergyMixin>().charge < EnergyCostPerUse) return false;
+                if (GameModeManager.GetOption<bool>(GameOption.TechnologyRequiresPower) && vehicle.GetComponent<EnergyMixin>().charge < EnergyCostPerShock)
+                    return false;
 
                 return true;
             }
@@ -102,56 +121,62 @@ namespace VELDsAlterraWeaponry
             {
                 if (target == null)
                     return false;
+
                 if (!target.TryGetComponent(out LiveMixin mixin))
                     return false;
 
                 return mixin.IsAlive();
             }
 
-            public bool Use(Vehicle exosuit, GameObject obj)
+            public bool Use(Vehicle vehicle, GameObject obj)
             {
-                if (Time.time < timeNextUse)
+                Logger.Log(Logger.Level.Debug, "Trying to use...", showOnScreen: true);
+                if (Time.time < timeNextZap)
                     return true;
 
-                if (!AbleToUse(exosuit))
+                Logger.Log(Logger.Level.Debug, "Timeout: OK", showOnScreen: true);
+                if (!AbleToShock(vehicle))
                     return false;
+                Logger.Log(Logger.Level.Debug, "Able to shock: OK", showOnScreen: true);
 
-                DefenseRadius(exosuit);
+                ShockRadius(vehicle);
+                Logger.Log(Logger.Level.Debug, "Shocked nothing.", showOnScreen: true);
 
                 if (!IsTargetValid(obj))
                     return true;
+                Logger.Log(Logger.Level.Debug, "Valid target(s): OK", showOnScreen: true);
 
-                ShockCreature(exosuit, obj);
-                timeNextUse = Time.time + DefenseCooldown;
+                ZapCreature(vehicle, obj);
+                timeNextZap = Time.time + ShockCooldown;
+                Logger.Log(Logger.Level.Debug, "Shocked !", showOnScreen: true );
                 return true;
-
             }
 
-            private static void DefenseRadius(Vehicle originVehicle)
+            private void ShockRadius(Vehicle originVehicle)
             {
                 if (originVehicle == null)
                     return;
 
-                GameObject gameObject = Utils.SpawnZeroedAt(DefensePerimeterPrefab, originVehicle.transform, false);
+                GameObject gameObject = Utils.SpawnZeroedAt(ElectricalDefensePrefab, originVehicle.transform, false);
                 ElectricalDefense defenseComponent = gameObject.GetComponent<ElectricalDefense>();
-                defenseComponent.charge = Power;
-                defenseComponent.radius *= Power;
-                defenseComponent.chargeScalar = Power;
-                defenseComponent.chargeRadius *= Power;
+                defenseComponent.charge = ShockPower;
+                defenseComponent.chargeScalar = ShockPower;
+                defenseComponent.radius *= ShockPower;
+                defenseComponent.chargeRadius *= ShockPower;
 
-                if (GameModeUtils.RequiresPower())
-                    originVehicle.GetComponent<EnergyMixin>().ConsumeEnergy(EnergyCostPerUse);
+                if (GameModeManager.GetOption<bool>(GameOption.TechnologyRequiresPower))
+                    originVehicle.GetComponent<EnergyMixin>().ConsumeEnergy(EnergyCostPerShock);
             }
 
-            private static void ShockCreature(Vehicle originVehicle, GameObject target)
+            private static void ZapCreature(Vehicle originVehicle, GameObject target)
             {
                 if (originVehicle == null || target == null)
                     return;
 
-                target.GetComponent<LiveMixin>().TakeDamage(DirectDefDamage, default, DamageType.Electrical, originVehicle.gameObject);
+                target.GetComponent<LiveMixin>().TakeDamage(DirectZapDamage, default, DamageType.Electrical, originVehicle.gameObject);
 
-                if (GameModeUtils.RequiresPower())
-                    originVehicle.GetComponent<EnergyMixin>().ConsumeEnergy(EnergyCostPerUse);
+                if (GameModeManager.GetOption<bool>(GameOption.TechnologyRequiresPower))
+                    originVehicle.GetComponent<EnergyMixin>().ConsumeEnergy(EnergyCostPerShock);
             }
         }
     }

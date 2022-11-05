@@ -2,7 +2,7 @@
   "Id": "VELDsAlterraWeaponry",
   "DisplayName": "Alterra® Weaponry™",
   "Author": "V E L D (VELD-Dev)",
-  "Version": "0.0.2.1",
+  "Version": "0.0.2.2",
   "Dependecies": [],
   "VersionDependencies": {
     "SMLHelper": "2.13.4"
