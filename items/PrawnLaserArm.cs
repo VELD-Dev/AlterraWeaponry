@@ -24,7 +24,7 @@ namespace VELDsAlterraWeaponry
 
         public override TechCategory CategoryForPDA => TechCategory.VehicleUpgrades;
         public override TechType RequiredForUnlock => TechType.PrecursorSanctuaryCube;
-        public override float CraftingTime => 30f;
+        public override float CraftingTime => 15f;
         public override EquipmentType EquipmentType => EquipmentType.ExosuitArm;
         public override string[] StepsToFabricatorTab => new string[] { "Upgrades", "ExosuitUpgrades" };
         public static void AddPDAEntry()

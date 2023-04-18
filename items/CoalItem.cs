@@ -25,7 +25,7 @@ namespace VELDsAlterraWeaponry
         public override TechGroup GroupForPDA => TechGroup.Resources;
         public override TechCategory CategoryForPDA => TechCategory.BasicMaterials;
         public override TechType RequiredForUnlock => TechType.CreepvinePiece;
-        public override float CraftingTime => 7.5f;
+        public override float CraftingTime => 4f;
         //public override PDAEncyclopedia.EntryData EncyclopediaEntryData => ;
         protected override Sprite GetItemSprite()
         {

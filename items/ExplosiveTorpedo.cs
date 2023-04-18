@@ -26,7 +26,7 @@ namespace VELDsAlterraWeaponry
         public override TechGroup GroupForPDA => TechGroup.VehicleUpgrades;
         public override TechCategory CategoryForPDA => TechCategory.VehicleUpgrades;
         public override TechType RequiredForUnlock => BlackPowderItem.ThisTechType;
-        public override float CraftingTime => 5f;
+        public override float CraftingTime => 3.5f;
         protected override Sprite GetItemSprite()
         {
             return ImageUtils.LoadSpriteFromFile(Path.Combine(AssetsFolder, "ExplosiveTorpedo.png"));
@@ -48,7 +48,7 @@ namespace VELDsAlterraWeaponry
         {
             if (prefab == null)
             {
-                CoroutineTask<GameObject> task = CraftData.GetPrefabForTechTypeAsync(TechType.WhirlpoolTorpedo);
+                CoroutineTask<GameObject> task = CraftData.GetPrefabForTechTypeAsync(TechType.GasTorpedo);
                 yield return gameObject;
 
                 prefab = GameObject.Instantiate(task.GetResult());

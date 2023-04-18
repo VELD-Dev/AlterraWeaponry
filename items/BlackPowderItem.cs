@@ -27,7 +27,7 @@ namespace VELDsAlterraWeaponry
         public override TechCategory CategoryForPDA => TechCategory.AdvancedMaterials;
         public override CraftTree.Type FabricatorType => CraftTree.Type.Fabricator;
         public override string[] StepsToFabricatorTab => new string[] { "Resources", "AdvancedMaterials" };
-        public override float CraftingTime => 3f;
+        public override float CraftingTime => 2.5f;
         protected override UnityEngine.Sprite GetItemSprite()
         {
             return ImageUtils.LoadSpriteFromFile(Path.Combine(AssetsFolder, "CoalItem.png"));
