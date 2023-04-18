@@ -1,0 +1,12 @@
+﻿global using BepInEx;
+global using BepInEx.Logging;
+global using HarmonyLib;
+global using SMLHelper.V2.Assets;
+global using SMLHelper.V2.Crafting;
+global using SMLHelper.V2.Handlers;
+global using SMLHelper.V2.Options.Attributes;
+global using SMLHelper.V2.Utility;
+global using System.IO;
+global using System.Reflection;
+global using VELDsAlterraWeaponry.behaviours;
+global using SubnauticaHelper;

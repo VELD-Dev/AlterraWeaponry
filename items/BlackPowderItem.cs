@@ -1,15 +1,5 @@
-﻿using System;
+﻿using System.Collections;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.IO;
-using System.Collections;
-
-using SMLHelper.V2.Assets;
-using SMLHelper.V2.Crafting;
-using SMLHelper.V2.Utility;
-using System.Reflection;
 using UnityEngine;
 
 namespace VELDsAlterraWeaponry
@@ -24,9 +14,11 @@ namespace VELDsAlterraWeaponry
 
         public BlackPowderItem() : base("BlackPowder", "BlackPowder", "Tooltip_BlackPowder")
         {
+            AlterraWeaponry.logger.LogInfo("Instantiating BlackPowderItem...");
             OnFinishedPatching += () =>
             {
                 ThisTechType = TechType;
+                AlterraWeaponry.logger.LogInfo("Instantiated BlackPowderItem.");
             };
         }
 
@@ -65,6 +57,7 @@ namespace VELDsAlterraWeaponry
             }
 
             GameObject go = GameObject.Instantiate(prefab);
+            go.AddComponent<OnPickup>();
             gameObject.Set(go);
         }
     }

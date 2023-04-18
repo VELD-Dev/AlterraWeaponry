@@ -1,17 +1,6 @@
-﻿using System;
+﻿using System.Collections;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.IO;
-using System.Collections;
-using System.Reflection;
-
-using SMLHelper.V2.Assets;
-using SMLHelper.V2.Crafting;
-using SMLHelper.V2.Utility;
 using UnityEngine;
-using UnityEngine.Sprites;
 
 namespace VELDsAlterraWeaponry
 {
@@ -23,9 +12,11 @@ namespace VELDsAlterraWeaponry
 
         public CoalItem() : base("Coal", "Coal", "Tooltip_Coal")
         {
+            AlterraWeaponry.logger.LogInfo("Instantiating CoalItem...");
             OnFinishedPatching += () =>
             {
                 ThisTechType = TechType;
+                AlterraWeaponry.logger.LogInfo("Instantiated CoalItem.");
             };
         }
 
@@ -62,6 +53,7 @@ namespace VELDsAlterraWeaponry
             }
 
             GameObject go = GameObject.Instantiate(prefab);
+            go.AddComponent<OnPickup>();
             gameObject.Set(go);
         }
     }

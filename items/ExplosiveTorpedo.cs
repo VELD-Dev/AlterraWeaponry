@@ -1,21 +1,10 @@
-﻿using SMLHelper.V2.Assets;
-using SMLHelper.V2.Crafting;
-using SMLHelper.V2.Utility;
-using System;
+﻿using System.Collections;
 using System.Collections.Generic;
-using System.Collections;
-using System.IO;
-using System.Linq;
-using System.Reflection;
-using System.Text;
-using System.Threading.Tasks;
 using UnityEngine;
-using Logger = QModManager.Utility.Logger;
-using UWE;
 
 namespace VELDsAlterraWeaponry
 {
-    internal class ExplosiveTorpedoItem : Craftable
+    public class ExplosiveTorpedoItem : Craftable
     {
         protected static GameObject prefab;
         public static TechType ThisTechType { get; private set; } = 0;
@@ -24,9 +13,11 @@ namespace VELDsAlterraWeaponry
 
         public ExplosiveTorpedoItem() : base("ExplosiveTorpedoItem", "ExplosiveTorpedoItem", "Tooltip_ExplosiveTorpedoItem")
         {
+            AlterraWeaponry.logger.LogInfo("Instantiating ExplosiveTorpedoItem...");
             OnFinishedPatching += () =>
             {
                 ThisTechType = TechType;
+                AlterraWeaponry.logger.LogInfo("Instantiated ExplosiveTorpedoItem.");
             };
         }
 
@@ -55,7 +46,7 @@ namespace VELDsAlterraWeaponry
 
         public override IEnumerator GetGameObjectAsync(IOut<GameObject> gameObject)
         {
-            if(prefab == null)
+            if (prefab == null)
             {
                 CoroutineTask<GameObject> task = CraftData.GetPrefabForTechTypeAsync(TechType.WhirlpoolTorpedo);
                 yield return gameObject;

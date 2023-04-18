@@ -1,11 +1,6 @@
 ﻿using System.Linq;
 using System.Xml;
 using System.Xml.Serialization;
-using System.IO;
-using System.Reflection;
-
-using SMLHelper.V2.Handlers;
-using Logger = QModManager.Utility.Logger;
 
 namespace VELDsAlterraWeaponry
 {
@@ -39,39 +34,40 @@ namespace VELDsAlterraWeaponry
         }
     }
 
-    class LanguagesHandler
+    public class LanguagesHandler
     {
         private static string ModPath = Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location);
         private static string filename = "Localizations.xml";
         public static void LanguagePatch()
         {
-            Logger.Log(Logger.Level.Info, "Starting patching the languages !");
-            XmlSerializer serializer = new XmlSerializer(typeof(LocalizationHandler.LocalizationPackages));
+            AlterraWeaponry.logger.LogInfo("Starting patching the languages !");
+            XmlSerializer serializer = new(typeof(LocalizationHandler.LocalizationPackages));
 
-            FileStream fs = new FileStream(Path.Combine(ModPath, filename), FileMode.Open);
+            FileStream fs = new(Path.Combine(ModPath, filename), FileMode.Open);
             LocalizationHandler.LocalizationPackages lps;
 
-            Logger.Log(Logger.Level.Info, Language.main.GetCurrentLanguage());
+            AlterraWeaponry.logger.LogInfo(Language.main.GetCurrentLanguage());
 
             lps = (LocalizationHandler.LocalizationPackages)serializer.Deserialize(fs);
 
-            foreach (LocalizationHandler.LocalizationPackage lockalizationpack in lps.Localizations) Logger.Log(Logger.Level.Info, lockalizationpack.Lang);
-            Logger.Log(Logger.Level.Info, "All LPs logged.");
+            foreach (LocalizationHandler.LocalizationPackage localizationpack in lps.Localizations)
+                AlterraWeaponry.logger.LogInfo(localizationpack.Lang);
+            AlterraWeaponry.logger.LogInfo("All LPs logged.");
 
-            foreach(LocalizationHandler.Text text in lps.Localizations.Single(lp => lps.Localizations.Any(lp1 => lp1.Lang == Language.main.GetCurrentLanguage()) ? lp.Lang == Language.main.GetCurrentLanguage() : lp.Lang == Language.defaultLanguage).Texts)
+            foreach (LocalizationHandler.Text text in lps.Localizations.Single(lp => lps.Localizations.Any(lp1 => lp1.Lang == Language.main.GetCurrentLanguage()) ? lp.Lang == Language.main.GetCurrentLanguage() : lp.Lang == Language.defaultLanguage).Texts)
             {
-                Logger.Log(Logger.Level.Info, $"Checking string, key {text.key}");
+                AlterraWeaponry.logger.LogInfo($"Checking string, key {text.key}");
                 if (Language.main.Get(text.key) != null)
                 {
                     LanguageHandler.SetLanguageLine(text.key, text.value);
-                    Logger.Log(Logger.Level.Info, $"Patched key {text.key} with text '{(text.value.Length > 50 ? text.value.Substring(50) : text.value)}'");
-                } 
+                    AlterraWeaponry.logger.LogInfo($"Patched key {text.key} with text '{(text.value.Length > 50 ? text.value.Substring(50) : text.value)}'");
+                }
                 else
                 {
-                    Logger.Log(Logger.Level.Warn, $"Key {text.key} does not reference any key in game. Please check the case.");
+                    AlterraWeaponry.logger.LogInfo($"Key {text.key} does not reference any key in game. Please check the case.");
                 }
             }
-            Logger.Log(Logger.Level.Info, "Language patching done.");
+            AlterraWeaponry.logger.LogInfo("Language patching done.");
         }
     }
 }

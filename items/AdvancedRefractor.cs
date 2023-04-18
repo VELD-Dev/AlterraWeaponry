@@ -1,15 +1,5 @@
-﻿using System;
+﻿using System.Collections;
 using System.Collections.Generic;
-using System.Collections;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.IO;
-using System.Reflection;
-
-using SMLHelper.V2.Assets;
-using SMLHelper.V2.Crafting;
-using SMLHelper.V2.Utility;
 using UnityEngine;
 
 namespace VELDsAlterraWeaponry
@@ -22,9 +12,11 @@ namespace VELDsAlterraWeaponry
 
         public AdvancedRefractor() : base("AdvancedRefractor", "AdvancedRefractor", "Tooltip_AdvancedRefractor")
         {
+            AlterraWeaponry.logger.LogInfo("Instantiating AdvancedRefractor...");
             OnFinishedPatching += () =>
             {
                 ThisTechType = TechType;
+                AlterraWeaponry.logger.LogInfo("Instantiated AdvancedRefractor.");
             };
         }
 
@@ -65,6 +57,7 @@ namespace VELDsAlterraWeaponry
             }
 
             GameObject go = GameObject.Instantiate(prefab);
+            go.AddComponent<OnPickup>();
             gameObject.Set(go);
         }
     }

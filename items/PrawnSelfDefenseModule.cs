@@ -1,17 +1,6 @@
-﻿using System;
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
-using System.IO;
-using System.Linq;
-using System.Reflection;
-using System.Text;
-using System.Threading.Tasks;
-
-using SMLHelper.V2.Assets;
-using SMLHelper.V2.Crafting;
-using SMLHelper.V2.Utility;
 using UnityEngine;
-using Logger = QModManager.Utility.Logger;
 
 namespace VELDsAlterraWeaponry
 {
@@ -23,9 +12,11 @@ namespace VELDsAlterraWeaponry
 
         public PrawnSelfDefenseModule() : base("PrawnSelfDefenseModule", "PrawnDefensePerimeter", "Tooltip_PrawnDefensePerimeter")
         {
+            AlterraWeaponry.logger.LogInfo("Instantiating PrawnSelfDefenseModule...");
             OnFinishedPatching += () =>
             {
                 thisTechType = TechType;
+                AlterraWeaponry.logger.LogInfo("Instantiated PrawnSelfDefenseModule.");
             };
         }
 
@@ -45,26 +36,26 @@ namespace VELDsAlterraWeaponry
         }
         public static void AddPDAEntry()
         {
-            PDA_Patch.AddPDAEntry("PrawnDefensePerimeter", "Tech/Weaponry");
+            AlterraWeaponry.logger.LogInfo("Added PDA entry for PrawnSelfDefenseModule.");
+            PDAHelper.AddEncyEntry("PrawnDefensePerimeter", "Tech/Weaponry");
         }
         protected override RecipeData GetBlueprintRecipe()
         {
-            return new RecipeData()
+            return new()
             {
                 craftAmount = 1,
-                Ingredients = new List<Ingredient> (new Ingredient[]
+                Ingredients = new List<Ingredient>(new Ingredient[]
                 {
-                    new Ingredient (TechType.AluminumOxide, 4),
-                    new Ingredient (TechType.Battery, 2),
-                    new Ingredient (TechType.AdvancedWiringKit, 1),
-                    new Ingredient (TechType.SeaTruckUpgradePerimeterDefense, 1)
+                    new(TechType.AluminumOxide, 4),
+                    new(TechType.AdvancedWiringKit, 1),
+                    new(TechType.AramidFibers, 1)
                 })
             };
         }
 
         public override IEnumerator GetGameObjectAsync(IOut<GameObject> gameObject)
         {
-            if(prefab == null)
+            if (prefab == null)
             {
                 CoroutineTask<GameObject> task = CraftData.GetPrefabForTechTypeAsync(TechType.SeaTruckUpgradePerimeterDefense);
                 yield return task;
@@ -73,6 +64,7 @@ namespace VELDsAlterraWeaponry
             }
 
             GameObject go = GameObject.Instantiate(prefab);
+            go.AddComponent<OnPickup>();
             gameObject.Set(go);
         }
 
@@ -106,7 +98,7 @@ namespace VELDsAlterraWeaponry
 
             public const float ShockCooldown = 10f;
             public float timeNextZap = 0;
-            private static float DamageMultiplier => AlterraWeaponry.Config.dmgMultiplier;
+            private static float DamageMultiplier => AlterraWeaponry.Configs.dmgMultiplier;
             private static float DirectZapDamage = (BaseRadius + ShockPower * BaseCharge) * DamageMultiplier * 0.5f;
             // Calculations and initial values based off ElectricalDefense component
 
@@ -130,25 +122,25 @@ namespace VELDsAlterraWeaponry
 
             public bool Use(Vehicle vehicle, GameObject obj)
             {
-                Logger.Log(Logger.Level.Debug, "Trying to use...", showOnScreen: true);
+                AlterraWeaponry.logger.LogInfo("Trying to use...");
                 if (Time.time < timeNextZap)
                     return true;
 
-                Logger.Log(Logger.Level.Debug, "Timeout: OK", showOnScreen: true);
+                AlterraWeaponry.logger.LogInfo("Timeout: OK");
                 if (!AbleToShock(vehicle))
                     return false;
-                Logger.Log(Logger.Level.Debug, "Able to shock: OK", showOnScreen: true);
+                AlterraWeaponry.logger.LogInfo("Able to shock: OK");
 
                 ShockRadius(vehicle);
-                Logger.Log(Logger.Level.Debug, "Shocked nothing.", showOnScreen: true);
+                AlterraWeaponry.logger.LogInfo("Shocked nothing.");
 
                 if (!IsTargetValid(obj))
                     return true;
-                Logger.Log(Logger.Level.Debug, "Valid target(s): OK", showOnScreen: true);
+                AlterraWeaponry.logger.LogInfo("Valid target(s): OK");
 
                 ZapCreature(vehicle, obj);
                 timeNextZap = Time.time + ShockCooldown;
-                Logger.Log(Logger.Level.Debug, "Shocked !", showOnScreen: true );
+                AlterraWeaponry.logger.LogInfo("Shocked !");
                 return true;
             }
 
