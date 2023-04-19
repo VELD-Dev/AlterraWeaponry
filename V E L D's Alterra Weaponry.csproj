@@ -95,18 +95,14 @@
     <Compile Include="items\PrawnSelfDefenseModule.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="utility\LanguagesHandler.cs" />
+    <Compile Include="utility\MessagesHandler.cs" />
     <Compile Include="utility\ModConfigs.cs" />
+    <Compile Include="utility\PDAHelper.cs" />
     <Compile Include="utility\SaveConfigs.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="mod.json" />
     <None Include="README.md" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\SubnauticaHelper\SubnauticaHelper.csproj">
-      <Project>{25af81d6-26f9-4cce-aba8-3e33d846a60a}</Project>
-      <Name>SubnauticaHelper</Name>
-    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <Content Include=".gitattributes" />
