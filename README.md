@@ -7,6 +7,8 @@
 Total downloads: [![total downloads](https://img.shields.io/github/downloads/VELD-Dev/AlterraWeaponry/total?color=success&logo=github)](https://github.com/VELD-Dev/AlterraWeaponry/downloads "Total downloads, including pre-releases, of the mod")  
 License: [![license](https://img.shields.io/badge/license-CC--BY--NC-green?style=flat&logo=creative-commons)](https://github.com/VELD-Dev/AlterraWeaponry/blob/master/LICENSE.txt "License of the mod")  
 
+# HEY ! I'm rewriting the mod from zero on a new repo ! Check https://github.com/VELD-Dev/Alterra-Weaponry !
+
 Subnautica Modding Discord: [![discord](https://img.shields.io/discord/324207629784186882?color=informational&label=subnautica%20modding&logo=discord&style=for-the-badge)](https://discord.gg/7M7cJWXMRe)
 
 # V E L D's Alterra Weaponry
